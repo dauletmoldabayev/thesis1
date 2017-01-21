@@ -1,0 +1,13 @@
+@book{deb01,
+	author = {C. de Boor},
+	title = {A Practical Guide to Splines},
+	publisher = {Springer-Verlag},
+	address = {New York},
+	year = {2001},
+}
+
+@misc{pyprop,
+	author = {Tore Birkeland and Raymond Nepstad},
+	title = {PyProp},
+	howpublished = {\url{http://pyprop.googlecode.com}},
+}

@@ -1,0 +1,68 @@
+\part{Scientific results}
+
+
+%--------------------------------------------------------------------------------------------------
+% Paper A
+%--------------------------------------------------------------------------------------------------
+\chapter*{Paper A}
+\section{The Whitham equation as a model for surface water waves}
+
+\noindent Daulet Moldabayev, Henrik Kalisch, Denys Dutyh \\
+
+\noindent \textit{Physica} D \textbf{309}, (2015)
+
+\noindent http://dx.doi.org/10.1016/j.physd.2015.07.010
+\cleardoublepage
+
+% This will include the bursted pdf. Remember to update the number of pages
+% (last parameter) to the actual number of pages
+\includepaperpages{../papers/paper-1/page_}{9}
+
+%--------------------------------------------------------------------------------------------------
+% Paper B
+%--------------------------------------------------------------------------------------------------
+
+\chapter*{Paper B}
+\section{The Whitham equation with surface tension}
+
+\noindent Evgueni Dinvay, Daulet Moldabayev, Denys Dutykh, Henrik Kalisch\\
+
+%\noindent \textit{Physical Review} B, \textbf{76}, 035303 (2007)
+\cleardoublepage
+
+% This will include the bursted pdf. Remember to update the number of pages
+% (last parameter) to the actual number of pages
+\includepaperpages{../papers/paper-2/page_}{18}
+
+%--------------------------------------------------------------------------------------------------
+% Paper C
+%--------------------------------------------------------------------------------------------------
+
+\chapter*{Paper C}
+\section{A numerical study of nonlinear dispersive wave models with SpecTraVVave}
+
+\noindent Henrik Kalisch, Daulet Moldabayev, Olivier Verdier\\
+
+%\noindent \textit{Physical Review} B, \textbf{76}, 035303 (2007)
+\cleardoublepage
+
+% This will include the bursted pdf. Remember to update the number of pages
+% (last parameter) to the actual number of pages
+\includepaperpages{../papers/paper-3/page_}{27}
+
+
+%--------------------------------------------------------------------------------------------------
+% Paper D
+%--------------------------------------------------------------------------------------------------
+
+\chapter*{Paper D}
+\section{Explicit solutions for a long-wave model with constant vorticity}
+
+\noindent Benjamin Segal, Daulet Moldabayev, Henrik Kalisch, Bernard Deconinck\\
+
+%\noindent \textit{Physical Review} B, \textbf{76}, 035303 (2007)
+\cleardoublepage
+
+% This will include the bursted pdf. Remember to update the number of pages
+% (last parameter) to the actual number of pages
+\includepaperpages{../papers/paper-4/page_}{19}

@@ -1,0 +1,20 @@
+\begin{thebibliography}{1}
+
+\bibitem{pyprop}
+{\sc Birkeland, T., and Nepstad, R.}
+\newblock Pyprop.
+\newblock \url{http://pyprop.googlecode.com}.
+
+\bibitem{deb01}
+{\sc de~Boor, C.}
+\newblock {\em A Practical Guide to Splines}.
+\newblock Springer-Verlag, New York, 2001.
+
+\bibitem{Dinvay2017}
+{\sc Dinvay, E., Moldabayev, D., Dutykh, D., and Kalisch, H.}
+\newblock The whitham equation with surface tension.
+\newblock {\em Nonlinear Dynamics\/} (2017), 1--14,
+  \href{http://dx.doi.org/10.1007/s11071-016-3299-7}{doi:
+  10.1007/s11071-016-3299-7}.
+
+\end{thebibliography}

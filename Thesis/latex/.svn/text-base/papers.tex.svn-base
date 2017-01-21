@@ -1,0 +1,17 @@
+\chapter{Scientific results}
+
+
+%--------------------------------------------------------------------------------------------------
+% Paper I
+%--------------------------------------------------------------------------------------------------
+\chapter*{Paper I}
+\section{Paper title}
+
+\noindent List of authors\\
+
+\noindent \textit{Physical Review} B, \textbf{76}, 035303 (2007)
+\cleardoublepage
+
+% This will include the bursted pdf. Remember to update the number of pages
+% (last parameter) to the actual number of pages
+\includepaperpages{../papers/paper-1/page_}{1}
