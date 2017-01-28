@@ -7,44 +7,44 @@ A level-1 auxiliary file: outline.aux
 A level-1 auxiliary file: introduction.aux
 The style file: acm.bst
 Database file #1: thesis.bib
-You've used 3 entries,
+You've used 4 entries,
             2293 wiz_defined-function locations,
-            560 strings with 4389 characters,
-and the built_in function-call counts, 868 in all, are:
-= -- 78
-> -- 41
+            568 strings with 4535 characters,
+and the built_in function-call counts, 1143 in all, are:
+= -- 107
+> -- 48
 < -- 0
-+ -- 19
-- -- 14
-* -- 59
-:= -- 150
-add.period$ -- 9
-call.type$ -- 3
-change.case$ -- 15
++ -- 22
+- -- 16
+* -- 82
+:= -- 194
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 19
 chr.to.int$ -- 0
-cite$ -- 3
-duplicate$ -- 32
-empty$ -- 75
-format.name$ -- 14
-if$ -- 176
+cite$ -- 4
+duplicate$ -- 42
+empty$ -- 101
+format.name$ -- 16
+if$ -- 233
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 3
-newline$ -- 18
-num.names$ -- 6
-pop$ -- 22
+int.to.str$ -- 4
+missing$ -- 4
+newline$ -- 23
+num.names$ -- 8
+pop$ -- 24
 preamble$ -- 1
-purify$ -- 13
+purify$ -- 16
 quote$ -- 0
-skip$ -- 20
+skip$ -- 26
 stack$ -- 0
-substring$ -- 33
-swap$ -- 6
+substring$ -- 54
+swap$ -- 8
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 10
+type$ -- 14
 warning$ -- 0
-while$ -- 8
-width$ -- 4
-write$ -- 33
+while$ -- 12
+width$ -- 5
+write$ -- 44

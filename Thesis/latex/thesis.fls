@@ -244,6 +244,13 @@ OUTPUT thesis.toc
 OUTPUT introduction.aux
 INPUT introduction.tex
 INPUT introduction.tex
+INPUT summary.tex
+INPUT summary.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eusm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eusm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eusm7.tfm
 INPUT thesis.bbl
 INPUT thesis.bbl
 INPUT thesis.brf
