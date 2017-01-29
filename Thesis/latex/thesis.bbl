@@ -1,14 +1,16 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{pyprop}
-{\sc Birkeland, T., and Nepstad, R.}
-\newblock Pyprop.
-\newblock \url{http://pyprop.googlecode.com}.
+\bibitem{Ablowitz81}
+{\sc Ablowitz, M., and Segur, H.}
+\newblock {\em Solitons and the inverse scattering transform, in: SIAM Studies
+  in Applied Mathematics}, vol.~4.
+\newblock SIAM, Philadelphia, 1981.
 
-\bibitem{deb01}
-{\sc de~Boor, C.}
-\newblock {\em A Practical Guide to Splines}.
-\newblock Springer-Verlag, New York, 2001.
+\bibitem{Minzoni2013}
+{\sc Aceves-Sánchez, P., Minzoni, A.~A., and Panayotaros, P.}
+\newblock Numerical study of a nonlocal model for water-waves with variable
+  depth.
+\newblock {\em Wave Motion 50\/} (2013), 80--93.
 
 \bibitem{Dinvay2017}
 {\sc Dinvay, E., Moldabayev, D., Dutykh, D., and Kalisch, H.}
@@ -17,10 +19,54 @@
   \href{http://dx.doi.org/10.1007/s11071-016-3299-7}{doi:
   10.1007/s11071-016-3299-7}.
 
+\bibitem{Drazin89}
+{\sc Drazin, P.~G., and Johnson, R.~S.}
+\newblock {\em Solitons: an introduction, in: Cambridge Texts in Applied
+  Mathematics}.
+\newblock Cambridge University Press, Cambridge, 1986.
+
+\bibitem{Ehrnstrom2012}
+{\sc Ehrnström, M., Groves, M.~D., and Wahlén, E.}
+\newblock On the existence and stability of solitary-wave solutions to a class
+  of evolution equations of whitham type.
+\newblock {\em Nonlinearity 25}, 10 (2012), 2903--2936.
+
+\bibitem{Ehrnstrom2009}
+{\sc Ehrnström, M., and Kalisch, H.}
+\newblock Traveling waves for the whitham equation.
+\newblock {\em Differential Integral Equations 22\/} (2009), 1193--1210.
+
+\bibitem{Hur2015}
+{\sc Hur, V.~M., and Johnson, M.~A.}
+\newblock Modulational instability in the whitham equation of water waves.
+\newblock {\em Stud. Appl. Math. 134}, 1 (2015), 120--143.
+
+\bibitem{Klein2015}
+{\sc Klein, C., and Saut, J.-C.}
+\newblock A numerical approach to blow-up issues for dispersive perturbations
+  of burgers’ equation.
+\newblock {\em Physica D 295\/} (2015), 46--65.
+
+\bibitem{Lannes2013}
+{\sc Lannes, D.}
+\newblock {\em The Water Waves Problem, in: Mathematical Surveys and
+  Monographs}, vol.~188.
+\newblock Amer. Math. Soc, Providence, 2013.
+
+\bibitem{Sanford2014}
+{\sc Sanford, N., Kodama, K., Carter, J.~D., and Kalisch, H.}
+\newblock Stability of traveling wave solutions to the whitham equation.
+\newblock {\em Phys. Lett. A 378\/} (2014), 2100--2107.
+
 \bibitem{Whitham1967}
 {\sc Whitham, G.}
 \newblock Variational methods and applications to water waves.
 \newblock {\em Proc. R. Soc. Lond. Ser. A 299\/} (1967), 6--25,
   \href{http://dx.doi.org/10.1098/rspa.1967.0119}{doi: 10.1098/rspa.1967.0119}.
+
+\bibitem{Whitham74}
+{\sc Whitham, G.~B.}
+\newblock {\em Linear and Nonlinear Waves}.
+\newblock Wiley, New York, 1974.
 
 \end{thebibliography}

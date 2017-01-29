@@ -41,7 +41,6 @@ known as the Whitham equation. The equation is written as
 \eta_t + \frac{3}{2} \frac{c_0}{h_0} \eta \eta_x + K_{h_0} \ast \eta_x = 0, 
 \label{whitham-equation}
 \end{equation}
-
 where the convolution kernel $K_{h_0}$ is given in terms of the Fourier
 transform by
 
@@ -49,7 +48,6 @@ transform by
 \mathcal{F}K_{h_0} (\xi) =  \sqrt{\frac{g \tanh(h_0\xi)}{\xi}}.
 \label{whitham-kernel}
 \end{equation}
-
 $g$ is the gravitational acceleration, $h_0$ is the undisturbed depth of
 the fluid, and $c_0 = \sqrt{gh_0}$ is the corresponding long-wave speed.
 The convolution can be thought of as a Fourier multiplier operator,
@@ -57,6 +55,74 @@ and \eqref{whitham-kernel} represents the Fourier symbol of the operator.
 The Whitham equation was proposed by Whitham \cite{Whitham1967} as an
 alternative to the well known Korteweg–de Vries (KdV) equation
 
+\begin{equation}
+\eta_t + c_0 \eta_x + \frac{3}{2} \frac{c_0}{h_0} \eta \eta_x + \frac{1}{6} c_0 h_0^2 \eta_{xxx} = 0.
+\label{kdv-equation}
+\end{equation}
+
+
+The validity of the KdV equation as a model for surface water waves
+can be described as follows. Suppose a wave field with a prominent
+amplitude $a$ and characteristic wavelength $l$ is to be studied. The
+KdV equation is known to produce a good approximation of the
+evolution of the waves if the amplitude of the waves is small and
+the wavelength is large when compared to the undisturbed depth,
+and if in addition, the two non-dimensional quantities $a / h_0$ and
+$h_0^2 / l^2$ are of similar size. The latter requirement can be written in
+terms of the Stokes number as
+
+\begin{equation}
+\mathcal{S} = \frac{a l^2}{h_0^3} \sim 1. 
+\label{stockes-number}
+\end{equation}
+While the KdV equation is a good model for surface waves if $\mathcal{S} \sim 1$, 
+one notorious problem with the KdV equation is that it does
+not model accurately the dynamics of shorter waves. Recognizing
+this shortcoming of the KdV equation, Whitham proposed to use
+the same nonlinearity as the KdV equation, but couple it with a
+linear term which mimics the linear dispersion relation of the full
+water-wave problem. Thus, at least in theory, the Whitham
+equation can be expected to yield a description of the dynamics
+of shorter waves which is closer to the solutions of the more
+fundamental Euler equations which govern the flow.
+
+The Whitham equation has been studied from a number of
+vantage points during recent years. In particular, the existence of
+traveling and solitary waves has been established in \citep{Ehrnstrom2012, Ehrnstrom2009}.
+Well
+posedness of a similar equation was investigated in \citetext{\citealp[]{Lannes2013}-\citealp[]{Klein2015}}, and a
+model with variable depth has been studied numerically in \cite{Minzoni2013}.
+Moreover, it has been shown in \citep{Hur2015, Sanford2014} that periodic solutions of
+the Whitham equation feature modulational instability for short
+enough waves in a similar way as small-amplitude periodic wave
+solutions of the water-wave problem. However, even though the
+equation is routinely mentioned in texts on nonlinear waves \citep{Drazin89, Whitham74}, it appears that the performance of the Whitham equation in
+the description of surface water waves has not been investigated
+so far.
+The purpose of the present article is to give an asymptotic
+derivation of the Whitham equation as a model for surface water
+waves, and to confirm Whitham’s expectation that the equation is
+a fair model for the description of time-dependent surface water
+waves. For the purpose of the derivation, we introduce an expo-
+nential scaling regime in which the Whitham equation can be de-
+rived asymptotically from an approximate Hamiltonian principle
+for surface water waves. In order to motivate the use of this scaling,
+note that the KdV equation has the property that wide classes of
+initial data decompose into a number of solitary waves and small-
+amplitude dispersive residue \cite{Ablowitz81}. For the KdV equations, solitary-
+wave solutions are known in closed form, and are given by
+\begin{equation}
+\eta = \frac{a}{h_0}\mbox{sech}^2\left(\sqrt{\frac{3a}{4h_0^3}(x - ct)}\right)
+\label{kdv-soliton}
+\end{equation}
+for a certain wave celerity $c$. These waves clearly comply with
+the amplitude–wavelength relation $a / h_0 \sim h_0^2 / l^2$ which was
+mentioned above. It appears that the Whitham equation – as indeed do many other nonlinear dispersive equations – also has
+the property that broad classes of initial data rapidly decompose
+into ordered trains of solitary waves (see Fig. 1). Quantifying the
+amplitude–wavelength relation for these solitary waves yields an
+asymptotic regime which is expected to be relevant to the validity
+of the Whitham equation as a water wave model.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Whitham equation with surface tension}
