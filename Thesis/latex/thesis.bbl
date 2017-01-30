@@ -12,6 +12,25 @@
   depth.
 \newblock {\em Wave Motion 50\/} (2013), 80--93.
 
+\bibitem{Benjamin1972}
+{\sc Benjamin, T.~B., Bona, J.~L., and Mahony, J.~J.}
+\newblock Model equations for long waves in nonlinear dispersive systems.
+\newblock {\em Philos. Trans. R. Soc. Lond. Ser. A 272\/} (1972), 47--78,
+  \href{http://dx.doi.org/10.1098/rsta.1972.0032}{doi: 10.1098/rsta.1972.0032}.
+
+\bibitem{Craig1994}
+{\sc Craig, W., and Groves, M.~D.}
+\newblock Hamiltonian long-wave approximations to the water-wave problem.
+\newblock {\em Wave Motion 19}, 4 (1994), 367--389,
+  \href{http://dx.doi.org/10.1016/0165-2125(94)90003-5}{doi:
+  10.1016/0165-2125(94)90003-5}.
+
+\bibitem{Craig1993}
+{\sc Craig, W., and Sulem, C.}
+\newblock Numerical simulation of gravity waves.
+\newblock {\em Journal of Computational Physics 108}, 1 (1993), 73-- -- 83,
+  \href{http://dx.doi.org/10.1006/jcph.1993.1164}{doi: 10.1006/jcph.1993.1164}.
+
 \bibitem{Dinvay2017}
 {\sc Dinvay, E., Moldabayev, D., Dutykh, D., and Kalisch, H.}
 \newblock The whitham equation with surface tension.
@@ -36,6 +55,13 @@
 \newblock Traveling waves for the whitham equation.
 \newblock {\em Differential Integral Equations 22\/} (2009), 1193--1210.
 
+\bibitem{Fetecau2005}
+{\sc Fetecau, R., and Levy, D.}
+\newblock Approximate model equations for water waves.
+\newblock {\em Commun. Math. Sci. 3}, 2 (2005), 159--170,
+  \href{http://dx.doi.org/10.4310/CMS.2005.v3.n2.a4}{doi:
+  10.4310/CMS.2005.v3.n2.a4}.
+
 \bibitem{Hur2015}
 {\sc Hur, V.~M., and Johnson, M.~A.}
 \newblock Modulational instability in the whitham equation of water waves.
@@ -53,6 +79,29 @@
   Monographs}, vol.~188.
 \newblock Amer. Math. Soc., Providence, 2013.
 
+\bibitem{Nicholls2001}
+{\sc Nicholls, D.~P., and Reitich, F.}
+\newblock A new approach to analyticity of dirichlet-neumann operators.
+\newblock {\em Proceedings of the Royal Society of Edinburgh: Section A
+  Mathematics 131}, 6 (2001), 1411--1433,
+  \href{http://dx.doi.org/10.1017/S0308210500001463}{doi:
+  10.1017/S0308210500001463}.
+
+\bibitem{Peregrine1966}
+{\sc Peregrine, D.~H.}
+\newblock Calculations of the development of an undular bore.
+\newblock {\em Journal of Fluid Mechanics 25}, 2 (1966), 321--330,
+  \href{http://dx.doi.org/10.1017/S0022112066001678}{doi:
+  10.1017/S0022112066001678}.
+
+\bibitem{Petrov1964}
+{\sc Petrov, A.~A.}
+\newblock Variational statement of the problem of liquid motion in a container
+  of finite dimensions.
+\newblock {\em Journal of Applied Mathematics and Mechanics 28}, 4 (1964),
+  917-- 922, \href{http://dx.doi.org/10.1016/0021-8928(64)90077-2}{doi:
+  10.1016/0021-8928(64)90077-2}.
+
 \bibitem{Sanford2014}
 {\sc Sanford, N., Kodama, K., Carter, J.~D., and Kalisch, H.}
 \newblock Stability of traveling wave solutions to the whitham equation.
@@ -68,5 +117,18 @@
 {\sc Whitham, G.~B.}
 \newblock {\em Linear and Nonlinear Waves}.
 \newblock Wiley, New York, 1974.
+
+\bibitem{Witting1984}
+{\sc Witting, J.~M.}
+\newblock A unified model for the evolution nonlinear water waves.
+\newblock {\em Journal of Computational Physics 56}, 2 (1984), 203--236,
+  \href{http://dx.doi.org/10.1016/0021-9991(84)90092-5}{doi:
+  10.1016/0021-9991(84)90092-5}.
+
+\bibitem{Zakharov1968}
+{\sc Zakharov, V.~E.}
+\newblock Stability of periodic waves of finite amplitude on the surface of a
+  deep fluid.
+\newblock {\em J. Appl. Mech. Tech. Phys. 9\/} (1968), 190--194.
 
 \end{thebibliography}

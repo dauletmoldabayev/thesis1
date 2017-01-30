@@ -246,6 +246,9 @@ INPUT introduction.tex
 INPUT introduction.tex
 INPUT summary.tex
 INPUT summary.tex
+INPUT paperA.tex
+INPUT paperA.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb7tn.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eusm10.tfm

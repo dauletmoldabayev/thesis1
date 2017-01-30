@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2016.11.15)  30 JAN 2017 19:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2016.11.15)  30 JAN 2017 22:22
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -845,45 +845,50 @@ Chapter 1.
 
 ]
 Chapter 2.
-LaTeX Font Info:    Try loading font information for U+eus on input line 48.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
+(./paperA.tex
+LaTeX Font Info:    Font shape `OT1/phv/bc/n' will be
+(Font)              scaled to size 13.67995pt on input line 4.
+LaTeX Font Info:    Try loading font information for U+eus on input line 41.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
-) [5] [6]
-Overfull \hbox (6.70341pt too wide) in paragraph at lines 117--126
+)
+[5] [6]
+Overfull \hbox (6.70341pt too wide) in paragraph at lines 110--119
 []\T1/ptm/m/n/13 for a cer-tain wave celer-ity $\OML/ztmcm/m/it/13 c$\T1/ptm/m/
 n/13 . These waves clearly com-ply with the am-pli-tude^^Uwavelength
  []
 
-)) [7] [8] (./thesis.bbl (./thesis.brf)
+[7] [8]) [9])) [10] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write5
 \openout5 = `thesis.brf'.
 
-) [9
+ [11
 
 
 
-] [10
+]) [12] [13
 
-] [11] [12]
+] [14]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
- (./thesis.aux
-(./preface.aux) (./acknowledgements.aux) (./outline.aux) (./introduction.aux))
+
+(./thesis.aux (./preface.aux) (./acknowledgements.aux) (./outline.aux)
+(./introduction.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 238.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: D1E64E1D409AA880EE41BBD1133F7A85;822.
+(rerunfilecheck)             Checksum: D5F7EDE175AE631C860BFF47D210BA74;991.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 1C9E414D5F227BB112F52F9194875569;635.
+(rerunfilecheck)             Checksum: 8E5CBC5C8366F37794B0F98CC83E64E5;1387.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 238.
  ) 
 Here is how much of TeX's memory you used:
- 8857 strings out of 493305
- 125693 string characters out of 6139896
- 222421 words of memory out of 5000000
- 12122 multiletter control sequences out of 15000+600000
- 49815 words of font info for 83 fonts, out of 8000000 for 9000
+ 8917 strings out of 493305
+ 126689 string characters out of 6139896
+ 223484 words of memory out of 5000000
+ 12179 multiletter control sequences out of 15000+600000
+ 50352 words of font info for 84 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 32i,12n,43p,409b,349s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,12n,46p,409b,475s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.dvi (22 pages, 39292 bytes).
+Output written on thesis.dvi (24 pages, 60520 bytes).
