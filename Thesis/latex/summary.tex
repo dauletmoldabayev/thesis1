@@ -18,7 +18,7 @@ Hamiltonian theory of surface water waves. A Hamiltonian system of Whitham type 
 way wave propagation is also derived. The Whitham equation is integrated numerically, and it is shown
 that the equation gives a close approximation of inviscid free surface dynamics as described by the
 Euler equations. The performance of the Whitham equation as a model for free surface dynamics is also
-compared to different free surface models: the KdV equation, the BBM equation, and the Padé (2,2) model.
+compared to different free surface models: the KdV equation, the BBM equation, and the Pad\'e (2,2) model.
 It is found that in a wide parameter range of amplitudes and wavelengths, the Whitham equation performs
 on par with or better than the three considered models.
 
@@ -124,6 +124,47 @@ amplitude–wavelength relation for these solitary waves yields an
 asymptotic regime which is expected to be relevant to the validity
 of the Whitham equation as a water wave model.
 
+As the curve fit in the right panel of Fig. 1 shows, the relationship
+between wavelength and amplitude of the Whitham solitary
+waves can be approximately described by the relation $a/h_0 \sim e^{\kappa(l/h_0)^{\nu}}$ for certain values of $\kappa$ and $\nu$. Since the Whitham solitary
+waves are not known in exact form, the values of $\kappa$ and $\nu$ have to be
+found numerically. Then one may define a Whitham scaling regime
+\begin{equation}
+\mathcal{W}(\kappa, \nu) = \frac{a}{h_0}e^{\kappa(l/h_0)^{\nu}} \sim 1,
+\label{whitham-regime}
+\end{equation}
+and it will be shown in Sections 2 and 3 that this scaling can be used
+advantageously in the derivation of the Whitham equation. The
+derivation proceeds by examining the Hamiltonian formulation of
+the water-wave problem due to Zakharov, Craig and Sulem [13,14],
+and by restricting to wave motion which is predominantly in the
+direction of increasing values of x. The approach is similar to the
+method of [15], but relies on the new relation (5).
+First, in Section 2, a Whitham system is derived which allows for
+two-way propagation of waves. The Whitham equation is found in
+Section 3. Finally, in Section 4, a comparison of modeling properties
+of the KdV and Whitham equations is given. The comparison also
+includes the regularized long-wave equation
+\begin{equation}
+\eta_t + c_0 \eta_x + \frac{3}{2} \frac{c_0}{h_0} \eta \eta_x - \frac{1}{6} h_0^2 \eta_{xxt} = 0,
+\label{regularized-long-wave}
+\end{equation}
+which was put forward in [16] and studied in depth in [17], and
+which is also known as the BBM or PBBM equation. The linearized
+dispersion relation of this equation is not an exact match to the
+dispersion relation of the full water-wave problem, but it is much
+closer than the KdV equation, and it might also be expected that
+this equation may be able to model shorter waves more success-
+fully than the KdV equation. In order to obtain an even better match
+of the linear dispersion relation, one may make use of Pad\'e  expansions. In the context of simplified evolution equations, this
+approach was pioneered in [18]. For uni-directional models, this
+approach was advocated in [19], and in particular, the equation
+based on the Pad\'e (2,2) approximation was studied in depth. In dimensional variables, this model takes the form
+\begin{equation}
+\eta_t + c_0 \eta_x + \frac{3}{2} \frac{c_0}{h_0} \eta \eta_x
+- \frac{3}{20} c_0 h_0^2 \eta_{xxx} - \frac{19}{60} h_0^2 \eta_{xxt} = 0.
+\label{pade-2-2}
+\end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Whitham equation with surface tension}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
