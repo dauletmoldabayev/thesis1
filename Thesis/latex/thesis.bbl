@@ -31,6 +31,14 @@
 \newblock {\em Journal of Computational Physics 108}, 1 (1993), 73-- -- 83,
   \href{http://dx.doi.org/10.1006/jcph.1993.1164}{doi: 10.1006/jcph.1993.1164}.
 
+\bibitem{DeFrutos1992}
+{\sc de~Frutos, J., and Sanz-Serna, J.~M.}
+\newblock An easily implementable fourth-order method for the time integration
+  of wave problems.
+\newblock {\em Journal of Computational Physics 103}, 1 (1992), 160--168,
+  \href{http://dx.doi.org/10.1016/0021-9991(92)90331-R}{doi:
+  10.1016/0021-9991(92)90331-R}.
+
 \bibitem{Dinvay2017}
 {\sc Dinvay, E., Moldabayev, D., Dutykh, D., and Kalisch, H.}
 \newblock The whitham equation with surface tension.
@@ -44,6 +52,14 @@
   Mathematics}.
 \newblock Cambridge University Press, Cambridge, 1986.
 
+\bibitem{Dyachenko1996}
+{\sc Dyachenko, A.~I., Kuznetsov, E.~A., Spector, M.~D., and Zakharov, V.~E.}
+\newblock Analytical description of the free surface dynamics of an ideal fluid
+  (canonical formalism and conformal mapping).
+\newblock {\em Physics Letters A 221}, 1–2 (1996), 73--79,
+  \href{http://dx.doi.org/10.1016/0375-9601(96)00417-3}{doi:
+  10.1016/0375-9601(96)00417-3}.
+
 \bibitem{Ehrnstrom2012}
 {\sc Ehrnström, M., Groves, M.~D., and Wahlén, E.}
 \newblock On the existence and stability of solitary-wave solutions to a class
@@ -55,12 +71,34 @@
 \newblock Traveling waves for the whitham equation.
 \newblock {\em Differential Integral Equations 22\/} (2009), 1193--1210.
 
+\bibitem{Ehrnstrom2013}
+{\sc Ehrnström, M., and Kalisch, H.}
+\newblock Global bifurcation for the whitham equation.
+\newblock {\em Math. Mod. Nat. Phenomena 8\/} (2013), 13--30,
+  \href{http://dx.doi.org/10.1051/mmnp/20138502}{doi: 10.1051/mmnp/20138502}.
+
 \bibitem{Fetecau2005}
 {\sc Fetecau, R., and Levy, D.}
 \newblock Approximate model equations for water waves.
 \newblock {\em Commun. Math. Sci. 3}, 2 (2005), 159--170,
   \href{http://dx.doi.org/10.4310/CMS.2005.v3.n2.a4}{doi:
   10.4310/CMS.2005.v3.n2.a4}.
+
+\bibitem{Fornberg1978}
+{\sc Fornberg, B., and Whitham, G.~B.}
+\newblock A numerical and theoretical study of certain nonlinear wave
+  phenomena.
+\newblock {\em Philosophical Transactions of the Royal Society of London A:
+  Mathematical, Physical and Engineering Sciences 289}, 1361 (1978), 373--404,
+  \href{http://dx.doi.org/10.1098/rsta.1978.0064}{doi: 10.1098/rsta.1978.0064}.
+
+\bibitem{Hammack1974}
+{\sc Hammack, J.~L., and Segur, H.}
+\newblock The korteweg-de vries equation and water waves. part 2. comparison
+  with experiments.
+\newblock {\em Journal of Fluid Mechanics 65}, 2 (1974), 289--314,
+  \href{http://dx.doi.org/10.1017/S002211207400139X}{doi:
+  10.1017/S002211207400139X}.
 
 \bibitem{Hur2015}
 {\sc Hur, V.~M., and Johnson, M.~A.}
@@ -79,6 +117,20 @@
   Monographs}, vol.~188.
 \newblock Amer. Math. Soc., Providence, 2013.
 
+\bibitem{Li2004}
+{\sc Li, Y.~A., Hyman, J.~M., and Choi, W.}
+\newblock A numerical study of the exact evolution equations for surface waves
+  in water of finite depth.
+\newblock {\em Studies in Applied Mathematics 113}, 3 (2004), 303--324,
+  \href{http://dx.doi.org/10.1111/j.0022-2526.2004.01534.x}{doi:
+  10.1111/j.0022-2526.2004.01534.x}.
+
+\bibitem{Mitsotakis2014}
+{\sc Mitsotakis, D., Dutykh, D., and D., C.~J.}
+\newblock On the nonlinear dynamics of the traveling-wave solutions of the
+  serre equations.
+\newblock submitted for publication.
+
 \bibitem{Nicholls2001}
 {\sc Nicholls, D.~P., and Reitich, F.}
 \newblock A new approach to analyticity of dirichlet-neumann operators.
@@ -86,6 +138,11 @@
   Mathematics 131}, 6 (2001), 1411--1433,
   \href{http://dx.doi.org/10.1017/S0308210500001463}{doi:
   10.1017/S0308210500001463}.
+
+\bibitem{Ovsyannikov1974}
+{\sc Ovsyannikov, L.}
+\newblock To the shallow water theory foundation.
+\newblock {\em Arch. Mech. 26\/} (1974), 407--422.
 
 \bibitem{Peregrine1966}
 {\sc Peregrine, D.~H.}
