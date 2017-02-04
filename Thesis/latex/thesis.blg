@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: preface.aux
@@ -7,47 +7,44 @@ A level-1 auxiliary file: outline.aux
 A level-1 auxiliary file: introduction.aux
 The style file: acm.bst
 Database file #1: thesis.bib
-Warning--I didn't find a database entry for "CGK"
-Warning--empty journal in Mitsotakis2014
-You've used 29 entries,
+You've used 1 entry,
             2293 wiz_defined-function locations,
-            777 strings with 9021 characters,
-and the built_in function-call counts, 9349 in all, are:
-= -- 938
-> -- 363
+            549 strings with 4196 characters,
+and the built_in function-call counts, 392 in all, are:
+= -- 36
+> -- 22
 < -- 0
-+ -- 160
-- -- 122
-* -- 833
-:= -- 1510
-add.period$ -- 87
-call.type$ -- 29
-change.case$ -- 144
++ -- 10
+- -- 8
+* -- 37
+:= -- 71
+add.period$ -- 3
+call.type$ -- 1
+change.case$ -- 7
 chr.to.int$ -- 0
-cite$ -- 30
-duplicate$ -- 299
-empty$ -- 798
-format.name$ -- 122
-if$ -- 1908
+cite$ -- 1
+duplicate$ -- 10
+empty$ -- 27
+format.name$ -- 8
+if$ -- 74
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 33
-newline$ -- 148
-num.names$ -- 58
-pop$ -- 118
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 8
+num.names$ -- 2
+pop$ -- 5
 preamble$ -- 1
-purify$ -- 119
+purify$ -- 6
 quote$ -- 0
-skip$ -- 153
+skip$ -- 6
 stack$ -- 0
-substring$ -- 732
-swap$ -- 57
+substring$ -- 22
+swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 108
-warning$ -- 1
-while$ -- 105
-width$ -- 31
-write$ -- 313
-(There were 2 warnings)
+type$ -- 4
+warning$ -- 0
+while$ -- 4
+width$ -- 2
+write$ -- 13

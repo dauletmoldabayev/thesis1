@@ -4,13 +4,5 @@
 \contentsline {part}{I\hspace {1em}Background}{1}{part.1}
 \contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
 \contentsline {chapter}{\numberline {2}Summary of results}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}The Whitham equation as a model for surface water waves}{5}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Introduction.}{5}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Derivation of evolution systems of Whitham type.}{8}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Derivation of evolution equations of Whitham type}{11}{section.2.2}
-\contentsline {section}{\numberline {2.3}Numerical results}{12}{section.2.3}
-\contentsline {section}{\numberline {2.4}The Whitham equation with surface tension}{15}{section.2.4}
-\contentsline {section}{\numberline {2.5}A numerical study of nonlinear dispersive wave models with SpecTraVVave}{15}{section.2.5}
-\contentsline {section}{\numberline {2.6}Explicit solutions for a long-wave model with constant vorticity}{15}{section.2.6}
-\contentsline {chapter}{Bibliography}{17}{section.2.6}
-\contentsline {part}{II\hspace {1em}Scientific results}{21}{part.2}
+\contentsline {section}{\numberline {2.1}A numerical study of nonlinear dispersive wave models with SpecTraVVave}{5}{section.2.1}
+\contentsline {chapter}{Bibliography}{7}{section.2.1}

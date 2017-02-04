@@ -53,6 +53,8 @@
 \usepackage[utf8]{inputenc} % We want æøå
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage[mathcal]{euscript} % For caligraphy fonts
 \usepackage{booktabs}       % Publication quality tables
 \usepackage{setspace}       % Easy setting of line spacing
@@ -136,9 +138,6 @@
 
 \DeclareMathOperator{\sech}{sech}
 
-\newcommand{\tsrK}{\tilde{\mathcal{K}}}
-\newcommand{\srK}{\mathcal{K}}
-\newcommand{\srF}{\mathcal{F}}
 \newcommand*\Lop{\mathcal{L}}
 \newcommand*\Aop{\mathcal{A}}
 \newcommand*\RR{\mathbf{R}}
@@ -154,15 +153,12 @@
 \newtheorem{lemma}[theorem]{\bf Lemma}
 \newtheorem{corollary}[theorem]{\bf Corollary}
 \newtheorem{proposition}[theorem]{\bf Proposition}
-\newtheorem{definition}[theorem]{\bf Definition}
+%\newtheorem{definition}[theorem]{\bf Definition}
 \newtheorem{conjecture}[theorem]{\bf Conjecture}
 \newtheorem{remark}[theorem]{\it Remark}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\sca}{-\kappa/\mu^\nu}
 
 \newcommand{\FF}{\mathcal{F}}
-\newcommand{\Lop}{\mathcal{L}}
-\newcommand{\Aop}{\mathcal{A}}
 \newcommand{\Hop}{\mathcal{H}}
 \newcommand{\DD}{\mathcal{D}}
 \newcommand{\SN}{\mathcal{S}_N}
@@ -301,7 +297,7 @@
 
 \bibliography{thesis}
 
-\part{Scientific results}
+%\part{Scientific results}
 %\pagenumbering{gobble}
 %\include{papers}               % The papers, with cover pages
 

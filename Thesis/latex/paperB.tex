@@ -34,16 +34,16 @@ The model equation under study is written as
 \end{equation}
 %
 where the convolution kernel of the operator
-\(
+\[
 	W \eta_x = w(-i \partial _x) \eta_x
 	= \big( {\mathcal F}^{-1} w \big) * \eta_x
-\)	
+\]	
 is given in terms of the Fourier transform by
+%	\mathcal{F} \big( K_{h_0} \big) =
+%	{\textstyle{ \sqrt{\frac{g\tanh (h_0\xi)}{\xi}}}}
 %
 \begin{equation}
 \label{symbol}
-%	\mathcal{F} \big( K_{h_0} \big) =
-%	{\textstyle{ \sqrt{\frac{g\tanh (h_0\xi)}{\xi}}}}
 	w(\xi) = \sqrt{ ( 1 + \varkappa \xi^2 ) \Sfrac{ \tanh(\xi) }{ \xi }}.
 \end{equation}
 %
@@ -74,7 +74,7 @@ real valued solution $\eta \in C^1( \mathbb R, L^2( \mathbb R ) )$
 of this equation the $L^2$-norm does not depend on time.
 
 
-The Whitham equation was proposed by Whitham \cite{Wh1} as an alternative to the
+The Whitham equation was proposed by Whitham \cite{Whitham1967} as an alternative to the
 well known Korteweg-de Vries (KdV) equation
 %
 \begin{equation}
@@ -158,8 +158,6 @@ to the equation without capillarity in the same way as \eqref{KdV}
 providing capillarity $\varkappa$ is small.
 
 
-
-
 Both KdV and Kawahara equations are generally believed to approximate
 very long waves quite well,
 but one notorious problem with these equations is that they do not model
@@ -184,7 +182,7 @@ feature modulational instability
 for short enough waves in a similar way as small-amplitude periodic wave
 solutions of the water-wave problem. 
 The performance of the Whitham equation in the description of surface water
-waves has been investigated in \cite{BKN} in the steady case without surface tension.
+waves has been investigated in \cite{Borluk2016} in the steady case without surface tension.
 However, it appears that no study of the performance of the Whitham equation
 in the presence of capillarity has been done.
 
@@ -289,7 +287,7 @@ on the second integral in order to arrive at the formulation
 This is the Hamiltonian of the water wave problem with surface tension
 as for instance found in \cite{Alazard2011},
 and written in terms of the Dirichlet-Neumann operator $G(\eta)$.
-As shown in \cite{Nicholls}, the Dirichlet-Neumann operator is analytic
+As shown in \cite{Nicholls2001}, the Dirichlet-Neumann operator is analytic
 in a certain sense, and can be expanded as a power series as
 %
 \[
@@ -298,7 +296,7 @@ in a certain sense, and can be expanded as a power series as
 \]
 %
 In order to proceed, we need to understand the first few terms in this series.
-As shown in \cite{CS} and \cite{CG}, the first two terms in this series
+As shown in \cite{Craig1993} and \cite{Craig1994}, the first two terms in this series
 can be written with the help of the operator $D = - i \partial_x$ as 
 %
 \[
@@ -366,7 +364,7 @@ Its behaviour at small wave-numbers defines different scaling regimes.
 The long-wave approximation means the scale $\eta = O(\alpha)$,
 $u = O(\alpha)$ and $D = - i \partial_x = O(\mu)$
 where $\alpha = \alpha(\mu)$ depends on the small parameter $\mu$.
-Now the Hamiltonian (\ref{Hamiltonian_eta_u}) may be simplified as follows
+Now the Hamiltonian \eqref{Hamiltonian_eta_u} may be simplified as follows
 %
 \begin{equation}
 \label{Hamiltonian_expansion}
@@ -498,7 +496,7 @@ well-known and we add it here only for completeness.
 
 The water-wave problem can be rewritten as a Hamiltonian system using
 the variational derivatives of $H$.
-Making reference to \citep{Craig1994}, Craig2005} note that
+Making reference to \citep{Craig1994, Craig2005} note that
 the pair $( \eta, \Phi )$ represents the canonical variables
 for the Hamiltonian function \eqref{Hamiltonian-eta-phi}.
 However, it is more common to write the equations of motion
@@ -1024,7 +1022,7 @@ There is the same expression for the other variational derivative
 with replacement $r$ by $s$.
 %
 %
-\subsection{Linear approximation.}
+\subsubsection{Linear approximation.}
 %
 %
 Let $r$ and $s$ be of the same order and $\alpha = o(1)$ as $\mu \to 0$.
@@ -1044,7 +1042,7 @@ This is the case when we do not have enough information about
 order relation between right- and left-going waves.
 %
 %
-\subsection{The shallow-water scaling regime.}
+\subsubsection{The shallow-water scaling regime.}
 %
 %
 Let $\alpha = O(1)$ as $\mu \to 0$.
@@ -1066,7 +1064,7 @@ which leads to the shallow-water equation
 \]
 %
 %
-\subsection{The Boussinesq scaling regime.}
+\subsubsection{The Boussinesq scaling regime.}
 %
 %
 Let $\alpha = O(\mu^2)$ and $s = o(\mu^2)$ as $\mu \to 0$.
