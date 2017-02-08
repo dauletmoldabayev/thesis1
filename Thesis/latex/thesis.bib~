@@ -8,6 +8,13 @@
 	year = {2013}
 }
 
+@book{Verdier2014, 
+	author = {Führer, C. and Solem, J. E. and Verdier, O.},
+	title = {Computing with Python: An introduction to Python for science and engineering},
+	publisher = {Pearson},
+	year = {2014}
+}
+
 @book{Drazin89, 
 	author = {Drazin, P. G.
 	and Johnson, R. S.},
@@ -418,7 +425,7 @@
 
 @article{Hur2015104,
 	title = "Modulational instability in the Whitham equation with surface tension and vorticity ",
-	journal = "Nonlinear Analysis: Theory, Methods & Applications ",
+	journal = "Nonlinear Analysis: Theory, Methods and Applications ",
 	volume = "129",
 	pages = "104--118",
 	year = "2015",
@@ -666,3 +673,237 @@
 	doi = "10.1016/j.wavemoti.2014.10.004",
 	author = "Dougalis, V. A. and Dur\'an, A. and  Mitsotakis, D.",
 }
+
+@article{Grujic2009,
+	title = "Gevrey regularity for a class of water-wave models ",
+	journal = "Nonlinear Analysis: Theory, Methods & Applications ",
+	volume = "71",
+	pages = "1160--1170",
+	year = "2009",
+	doi = "10.1016/j.na.2008.11.047",
+	author = "Grujić, Z. and Kalisch, H.",
+}
+
+  	
+@article{Tao2014,
+	author={Hur, V. M. and Tao, L.},
+  	title={Wave breaking for the Whitham equation with fractional dispersion},
+  	journal={Nonlinearity},
+  	volume={27},
+  	number={12},
+  	pages={2937-2950},
+  	year={2014},
+	doi = {10.1088/0951-7715/27/12/2937},
+}
+
+@Article{Kalisch2005,
+	author="Kalisch, Henrik",
+	title="Error Analysis of a Spectral Projection of the Regularized Benjamin--Ono Equation",
+	journal="BIT Numerical Mathematics",
+	year="2005",
+	volume="45",
+	number="1",
+	pages="69--89",
+	doi="10.1007/s10543-005-2636-x",
+}
+
+@article{Kalisch2007,
+	title = "Derivation and comparison of model equations for interfacial capillary-gravity waves in deep water",
+	journal = "Mathematics and Computers in Simulation",
+	volume = "74",
+	number = "2–3",
+	pages = "168--178",
+	year = "2007",
+	doi = "10.1016/j.matcom.2006.10.008",
+	author = "Kalisch, H.",
+}
+
+@article{Kalisch2000,
+	title={Models for Internal Waves in Deep Water},
+	journal = "Discrete and Continuous Dynamical Systems",
+	volume = "6",
+	pages = "1--20",
+	author={Kalisch, H. and Bona, J. L.},
+  	year={2000}
+}
+
+@article{Kato1983,
+	title = "On the Cauchy problem for the (generalized) Korteweg–de Vries equation",
+	journal = "Studies in applied mathematics, Adv. Math. Suppl. Stud.",
+	publisher = "Academic Press",
+	volume = "8",
+	pages = "93--128",
+	year = "1983",
+	author = "Kato, T.",
+}
+
+@article{Keller1977,
+	title = "Numerical solution of bifurcation and nonlinear eigenvalue problems",
+	journal = "Applications of Bifurcation Theory",
+	publisher = "Academic Press",
+	pages = "359--3	84",
+	year = "1977",
+	author = "Keller, H. B.",
+}
+
+@article{Martel2002,
+ author = {Martel, Y. and Merle, F.},
+ journal = "Journal of the American Mathematical Society",
+ number = {3},
+ pages = {617--664},
+ publisher = {American Mathematical Society},
+ title = {Blow up in finite time and dynamics of blow up solutions for the L2-critical generalized KDV equation},
+ volume = {15},
+ year = {2002}
+}
+
+@Article{Martel2016,
+	author="Martel, Yvan
+	and Pilod, Didier",
+	title="Construction of a minimal mass blow up solution of the modified Benjamin--Ono equation",
+	journal="Mathematische Annalen",
+	year="2016",
+	pages="1--93",
+	doi="10.1007/s00208-016-1497-8",
+}
+
+@Article{github,
+	author="Moldabayev, Daulet 
+	and Verdier, O.
+	and Kalisch, Henrik",
+	title="SpecTraVVave",
+	note = "available at https://github.com/olivierverdier/SpecTraVVave",
+	url = "https://github.com/olivierverdier/SpecTraVVave",
+}
+
+@article{Nguyen2009,
+	title = "Orbital stability of negative solitary waves ",
+	journal = "Mathematics and Computers in Simulation ",
+	volume = "80",
+	number = "1",
+	pages = "139--150",
+	year = "2009",
+	doi = "10.1016/j.matcom.2009.06.010",
+	author = "Nguyen, N. T. and Kalisch, H.",
+}
+
+@article{Ono1975,
+	author = {Ono, H.},
+	title = {Algebraic Solitary Waves in Stratified Fluids},
+	journal = {Journal of the Physical Society of Japan},
+	volume = {39},
+	number = {4},
+	pages = {1082--1091},
+	year = {1975},
+	doi = {10.1143/JPSJ.39.1082},
+}
+
+@article{Pelinovsky2004,
+	author = {Pelinovsky, D. E. and Stepanyants, Y. A.},
+	title = {Convergence of Petviashvili’s iteration method for numerical approximation of stationary solutions of nonlinear wave equations},
+	journal = {J. Numer. Anal.},
+	volume = {42},
+	pages = {1110--1127},
+	year = {2004},
+	publisher = "SIAM",
+	doi = {10.1137/S0036142902414232},
+}
+
+@Article{ Petviashvili1976,
+  Author    = {Petviashvili, V. I.},
+  Title     = {Equation of an extraordinary soliton},
+  Journal   = {Sov. J. Plasma Phys.},
+  Volume    = {2},
+  Pages     = {257--258},
+  year      = "1976",
+}
+
+@Article{Perez2007,
+  Author    = {P\'erez, Fernando and Granger, B. E.},
+  Title     = {IPython: a System for Interactive Scientific Computing},
+  Journal   = {Computing in Science and Engineering},
+  Volume    = {9},
+  Number    = {3},
+  Pages     = {21--29},
+  year      = 2007,
+  url       = "http://ipython.org",
+  doi       = {10.1109/MCSE.2007.53},
+  publisher = {IEEE Computer Society},
+}
+
+@article{Remonato2016,
+	title = "Numerical bifurcation for the capillary Whitham equation ",
+	journal = "Physica D: Nonlinear Phenomena ",
+	pages = " - ",
+	year = "2016",
+	doi = "10.1016/j.physd.2016.11.003",
+	author = "Remonato, F. and Kalisch, H.",
+}
+
+@article{Sherratt2012,
+  title={Numerical continuation methods for studying periodic travelling wave (wavetrain) solutions of partial differential equations},
+  author={Sherratt, J. A.},
+  journal={Applied Mathematics and Computation},
+  year={2012},
+  volume={218},
+  pages={4684--4694}
+ doi = {10.1016/j.amc.2011.11.005},
+}
+
+
+@ARTICLE{Tjon1979,
+   author = {{Courtenay Lewis}, J. and {Tjon}, J.~A.},
+    title = "{Resonant production of solitons in the RLW equation}",
+  journal = {Physics Letters A},
+     year = 1979,
+   volume = "73",
+    pages = {275--279},
+      doi = {10.1016/0375-9601(79)90532-2},
+}
+
+@article{Walsh2014,
+	title ="Steady stratified periodic gravity waves with surface tension I: Local bifurcation",
+	journal ="Discrete and Continuous Dynamical Systems",
+	volume ="34",
+	number ="8",
+	pages ="3241--3285",
+	year ="2014",
+	doi ="10.3934/dcds.2014.34.3241",
+	author ="Walsh, S.",
+}
+
+@article{Walsh2014j,
+	title ="Steady stratified periodic gravity waves with surface tension II: Global bifurcation",
+	journal ="Discrete and Continuous Dynamical Systems",
+	volume ="34",
+	number ="8",
+	pages ="3287--3315",
+	year ="2014",
+	doi ="10.3934/dcds.2014.34.3287",
+	author ="Walsh, S.",
+}
+
+@article{Wahlen2016,
+	title ="On Whitham's conjecture of a highest cusped wave for a nonlocal dispersive equation",
+	year ="2016",
+	author ="Ehrnstr{\"o}m, M. and  Wahl\'en, E. ",
+	note = "arXiv:1602.05384",
+}
+
+@article{Hur2015arxiv,
+	title ="Breaking in the Whitham equation for shallow water waves",
+	year ="2015",
+	author ="Hur, V.M.",
+	note = "arXiv:1506.04075",
+}
+
+@article{Doedel1997,
+	title ="AUTO97 : Continuation and bifurcation software for ordinary differential equations",
+	year ="1997",
+	author ="Doedel, E.J. and Champneys, A.R. and Fairgrieve, T.F. and Kuznetsov, Y.A. and Sandstede, B. and Wang, X.-J.",
+	note = "arXiv:1506.04075",
+	url "http://indy.cs.concordia.ca/auto/",
+	address = "Department of Computer Science and Software Engineering, Concordia University, Montreal, Canada",
+}
+
+

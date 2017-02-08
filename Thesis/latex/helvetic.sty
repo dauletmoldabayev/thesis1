@@ -1,0 +1,17 @@
+% ------------------------------------------------------------------------------
+% (C) 2015 Olivier Verdier <olivier.verdier@gmail.com>
+% Helvetic Package
+% Helvetica with pdflatex or xelatex
+% ------------------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{helvetic}[2015/04/27]
+
+\RequirePackage{ifxetex}
+
+\ifxetex
+\RequirePackage{fontspec}
+\setsansfont[Scale=0.9]{Helvetica}
+\else
+\usepackage[scaled=0.9]{helvet}
+\fi
+

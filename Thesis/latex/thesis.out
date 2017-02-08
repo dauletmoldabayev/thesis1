@@ -5,4 +5,7 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{part.1}% 5
 \BOOKMARK [0][-]{chapter.2}{Summary of results}{part.1}% 6
 \BOOKMARK [1][-]{section.2.1}{A numerical study of nonlinear dispersive wave models with SpecTraVVave}{chapter.2}% 7
-\BOOKMARK [0][-]{section.2.1}{Bibliography}{part.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.1}{Introduction}{section.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.2}{Spectral scheme and construction of nonlinear system.}{section.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.1.3}{Construction of nonlinear system.}{section.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.1.4}{Convergence.}{section.2.1}% 11

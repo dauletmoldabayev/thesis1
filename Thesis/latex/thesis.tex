@@ -45,7 +45,6 @@
 \allsectionsfont{\usefont{OT1}{phv}{bc}{n}\selectfont} % Set chapter/section header to narrow helvectica (arial-like)
 %\usepackage[scaled]{luximono} % for monospaced fonts (\texttt{...} or \ttfamily)
 
-
 %
 % Packages we need
 %
@@ -68,6 +67,22 @@
 \usepackage[procnames]{listings} % beautiful listings
 \usepackage{units}				 % semantically represent numbers with units
      
+\usepackage[final, nomicrotype, noetex]{allergy}
+\usepackage{unixode}
+\usepackage{helvetic}
+\ifxetex
+\RequirePackage{fontspec}
+\setmonofont[Scale=0.9]{Inconsolata}
+\else
+\usepackage{inconsolata}
+\fi
+
+
+\usepackage{enumitem}
+
+\usepackage[hang]{subfigure}
+
+\usepackage{authblk}
 
 %
 % The hyperref package allows advanced hyperlinking functionality

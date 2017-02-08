@@ -33,7 +33,7 @@ solutions may cross and connect high up on the branch in the nonlinear regime.
 %Include keywords and mathematical subject classification numbers as needed.
 
 
-\section{Introduction}
+\subsection{Introduction}
 \label{intro}
 
 This paper is concerned with traveling wave solutions for a class of nonlinear dispersive
@@ -77,10 +77,10 @@ The order of the operator $\mathcal{L}$ appearing in~\eqref{nonlocal}
 has a major effect on the types of solutions that may be found. 
 A higher-order operator, such as in the Korteweg--de Vries equation, 
 acts as a smoothing operator because of its effect of spreading different frequency components
-out due to a strongly varying phase speed~\cite{Kato}. Lower-order operators 
+out due to a strongly varying phase speed~\cite{Kato1983}. Lower-order operators 
 such as the operator $K_{h_0}$ in~\eqref{symbol} appearing in the Whitham equation
-may allow solutions to develop singularities, such as derivative blow-up (see~\cite{Hur2015}, \cite{HurTao})
-and formation of cusps (see~\cite{EW2016}).
+may allow solutions to develop singularities, such as derivative blow-up (see~\cite{Hur2015arxiv}, \cite{Tao2014})
+and formation of cusps (see~\cite{Wahlen2016}).
 
 On the other hand, highly nonlinear functions $f(u)$ may lead to $L^{\infty}$-blow-up.
 For instance, the generalized KdV equation which is written in normalized form as
@@ -95,15 +95,15 @@ In the case of the generalized Benjamin--Ono equation
 u_t + u^{p}u_x + u_x - \mathcal{H} u_{xx} = 0,
 \end{equation*}
 where $\mathcal{H}$ is the Hilbert transform, numerical evidence points to singularity formation 
-for $p > 2$~\cite{BoKa}, but no proofs are available at this time. 
+for $p > 2$~\cite{Bona2004}, but no proofs are available at this time. 
 
 
 In order to study different phenomena related to equations of the form~\eqref{nonlocal} 
 and their traveling wave solutions, a \textsf{Python}-based solver package \textsf{SpecTraVVave} 
 was developed by the authors~\cite{github}. 
-The general idea behind the solver is to use a numerical continuation method~\cite{Keller} 
+The general idea behind the solver is to use a numerical continuation method~\cite{Keller1977} 
 implemented with a pseudo-spectral algorithm. 
-Similar previous projects include \textsf{AUTO}~\cite{Doed97} and \textsf{Wavetrain}~\cite{Sherratt}.
+Similar previous projects include \textsf{AUTO}~\cite{Doedel1997} and \textsf{Wavetrain}~\cite{Sherratt2012}.
 \textsf{AUTO} is written in \emph{C}, whereas \textsf{Wavetrain} is written in \emph{Fortran}. 
 Both programs are efficient and very general, as they are able to cover a wide range of problems
 involving bifurcation analyses. However, from a user's perspective, 
@@ -113,17 +113,17 @@ may lead to some difficulties in utilizing these programs efficiently.
 \textsf{SpecTraVVave} is designed to provide researchers with a simple yet effective tool 
 for investigating problems on traveling waves. The package is flexible, 
 and its functionality can be easily expanded. 
-The availability of the \textsf{IPython} notebook \cite{IPython} makes the solver very interactive,
+The availability of the \textsf{IPython} notebook \cite{Perez2007} makes the solver very interactive,
 so that it should be easier for new users to get started.
 
 In order to maximize ease of use, \textsf{SpecTraVVave} was designed
 to find even solutions of~\eqref{nonlocal}.
 Symmetry of steady solutions can be proved for some of the models
-in the form~\eqref{nonlocal}, but not for all~\cite{CB}.
+in the form~\eqref{nonlocal}, but not for all~\cite{Chen1998}.
 Some of these equations also admit non-smooth solutions,
 for instance as termination points of a bifurcation branch.
 This happens for example for the Whitham equation, which features bifurcation
-curves which terminate in a solution with a cusp~\cite{EW2016}.
+curves which terminate in a solution with a cusp~\cite{Wahlen2016}.
 One of the goals of the present paper is to investigate the
 precise nature of the termination of the bifurcation curve.
 
@@ -134,10 +134,10 @@ The content of the paper is structured as follows. A mathematical description of
 \textsf{SpecTraVVave} is given in \autoref{sec:spectral}. \autoref{sec:experiments} presents results of different experiments carried out with the package. Concluding remarks are given in \autoref{sec:conclusion}. A method for finding initial guesses for the solver is described in \autoref{sec:stokes}. \autoref{sec:implementation} contains a schematic of program and a description of its workflow.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Spectral scheme and construction of nonlinear system.}
+\subsection{Spectral scheme and construction of nonlinear system.}
 \label{sec:spectral}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Cosine collocation method.}
+\subsubsection{Cosine collocation method.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 To compute traveling wave solutions to the equation~\eqref{nonlocal} the following ansatz is employed:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -181,7 +181,7 @@ method based on the Fourier basis, but the cosine basis does all of the above au
 In addition,  the \textsf{Python} cosine transform is based on an integrated algorithm, which
 relies on an optimized version of the discrete cosine transform (DCT).
 	
-The following description of computation scheme was presented in detail in~\cite{EK2}, 
+The following description of computation scheme was presented in detail in~\cite{Ehrnstrom2013}, 
 but we will briefly repeat it here for consistency of the manuscript. For the purpose of clarity, 
 we will refer to full wavelength $L$ of a solution as the (full) wavelength, 
 and half of fundamental wavelength will be called half-wavelength. 
@@ -290,7 +290,7 @@ on the bifurcation branch with relative ease.
 	P_\ast: \quad c_\ast = c_3 + \theta d^c_{\bot} \qquad &a_\ast = a_3 + \theta d^a_{\bot}.
 	\end{align*}
 %%%%%%%%%===========%%%%%%%%%%%%%%%
-	 A schematic sketch of finding a new solution $P_\ast$ is given in \autoref{navig}.	
+	 A schematic sketch of finding a new solution $P_\ast$ is given in Figure 1.	
 	
 	The variable $\theta$ is computed by Newton's method from the extended system 
 %%%%%%%%%===========%%%%%%%%%%%%%%%	
@@ -357,12 +357,12 @@ F\left(
 %%%%%%%%%===========%%%%%%%%%%%%%%%	
 	 This enables us to compute traveling wave solutions that mimic solitary wave solutions. 	
 %%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{figure}
-\centering
-		\includegraphics[width=0.35\textwidth]{navig}
-\caption{\small Navigation on the bifurcation curve.}
-\label{navig}
-\end{figure} 
+%\begin{figure}
+%\centering
+%		\includegraphics[width=0.35\textwidth]{navig}
+%\caption{\small Navigation on the bifurcation curve.}
+%\label{navig}
+%\end{figure} 
 %%%%%%%%%===========%%%%%%%%%%%%%%%
 
 
@@ -389,8 +389,8 @@ that have the wave trough at zero.
 In case of the KdV equation solitary wave solutions have exponential decay, 
 and therefore, considering the symmetry of solitary solutions, 
 the half-wavelength of $30$ is considered for the comparison. 
-\itodo[DM]{as mentioned before: should we call the (full-wavelength )/2 as half-wavelength OR just wavelength. 
-This may lead to confusions for reviewers.}
+%\itodo[DM]{as mentioned before: should we call the (full-wavelength )/2 as half-wavelength OR just wavelength. 
+%This may lead to confusions for reviewers.}
 Approximation errors are summarized in \autoref{t2}.
 %
 \begin{table}  [ht]
@@ -416,12 +416,12 @@ Nb.\ of grid points & $\log_{10}(\|u_{\mathrm{exact}} - u\|_{L^{\infty}})$ & $\l
 %%%%%%%%%===========%%%%%%%%%%%%%%%	
 
 %%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.47\textwidth]{convergence}      
-\caption{\small Graph of error estimates given in \autoref{t2}.}
-\label{L2convergence}
-\end{figure} 
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[width=0.47\textwidth]{convergence}      
+%\caption{\small Graph of error estimates given in \autoref{t2}.}
+%\label{L2convergence}
+%\end{figure} 
 %%%%%%%%%===========%%%%%%%%%%%%%%%
 
 
@@ -429,11 +429,11 @@ Nb.\ of grid points & $\log_{10}(\|u_{\mathrm{exact}} - u\|_{L^{\infty}})$ & $\l
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Experiments with SpecTraVVave.}
+\subsection{Experiments with SpecTraVVave.}
 \label{sec:experiments}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Termination of the waveheight-velocity bifurcation curve of the Whitham equation.}
+\subsubsection{Termination of the waveheight-velocity bifurcation curve of the Whitham equation.}
 \label{sec-W-term}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The waveheight-velocity bifurcation curve of the Whitham equation 
@@ -443,12 +443,12 @@ The waveheight-velocity bifurcation curve of the Whitham equation
 	\widehat{Ku}(k) = \sqrt{\frac{\tanh(k)}{k}},  \label{W}
 \end{align}
 %%%%%%%%%===========%%%%%%%%%%%%%%%
-was studied numerically in~\cite{EK2}. 	
+was studied numerically in~\cite{Ehrnstrom2013}. 	
 An attempt was made to identify the termination point of the Whitham bifurcation curve. 
 The investigation was limited by computational tools and complete results were not obtained. 
 In particular, the authors could not confirm that traveling wave solutions do not exist 
 past the point where the authors, based on pioneering work of Whitham
-\cite{Wh1} suspected a cusped solution.
+\cite{Whitham1967j} suspected a cusped solution.
 In this section a number of numerical results on nature of the bifurcation curve
 for the Whitham equation are presented.
 Solutions to the equation~\eqref{W}
@@ -478,7 +478,7 @@ The following questions are under study:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The results presented here focus on $2\pi$-periodic solutions to the equation~\eqref{W-int}, 
 i.e., solutions of the system~\eqref{system-N3}. 
-\autoref{bif-curve-all} presents Whitham bifurcation curves with numbers of grid points 
+Figure 3 presents Whitham bifurcation curves with numbers of grid points 
 $N = 512$, $N=1024$ and $N=2048$. 
 The current implementation of the \textsf{SpecTraVVave} package allows fixing the number of grid points $N$ 
 and a so-called doubling parameter $\DD$, 
@@ -493,12 +493,12 @@ after tests with a number of resolutions were run,
 and the curves shown did not change significantly under further refinement.
 
 %%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.48\textwidth]{512_1024_2048}{}      
-\caption{\small Whitham bifurcation curve in different grid resolutions.}
-\label{bif-curve-all}
-\end{figure} 
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[width=0.48\textwidth]{512_1024_2048}{}      
+%\caption{\small Whitham bifurcation curve in different grid resolutions.}
+%\label{bif-curve-all}
+%\end{figure} 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -506,7 +506,7 @@ and the curves shown did not change significantly under further refinement.
 %\subsubsection{Specific solutions and their stability.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
-\autoref{bif-L2-1024}\subref{sfig:bif-ch} % chktex 8
+Figure 4(a) % chktex 8
 presents the Whitham bifurcation curve computed by \textsf{SpecTraVVave} 
 with $N=1024$ and $\DD=1$. 
 There are three solutions which deserve to be singled out:
@@ -517,12 +517,12 @@ There are three solutions which deserve to be singled out:
 	\item Cusped traveling wave solution (square).
 \end{enumerate}
 %%%%%%%%%===========%%%%%%%%%%%%%%%
-Profiles of the above listed solutions are given in \autoref{3waves}\subref{sfig:prof-sing}.
+Profiles of the above listed solutions are given in Figure 5(a).
 The solution with minimum velocity corresponds to the turning point of the bifurcation curve.
 The solution with maximum $L^2$-norm is very close to the latter one, although it has a higher waveheight 
 and a different velocity.
 The solution marked by a square is called here the \emph{terminal solution}.
-As already mentioned, previous studies, such as~\cite{EK1,EK2} did not provide any conclusive
+As already mentioned, previous studies, such as~\cite{Ehrnstrom2009,Ehrnstrom2013} did not provide any conclusive
 analysis on the part of the bifurcation curve past the turning point.
 In particular, it was not clear whether solutions ceased to exist
 at or after the turning point, or whether solutions were stable
@@ -531,25 +531,25 @@ or unstable after the turning point.
 Let us first focus on the stability of solutions.
 Note that \textsf{SpecTraVVave} has an evolution integrator routine, 
 which enables one to check the stability of computed solutions. 	
-The current version of the package uses the fourth-order method developed in~\cite{dFSS}.
+The current version of the package uses the fourth-order method developed in~\cite{DeFrutos1992}.
 In addition one may use a more refined analysis, resting on the evaluation
 of invariant functionals. This analysis is based on the observation
 that the traveling waves can be thought of as solutions of a constrained
 minimization problem. This analysis is based on ideas developed by
-Boussinesq, first exploited in~\cite{B2}, and later used 
-in~\cite{BSS,TJB,NgK}, and many other works.
+Boussinesq, first exploited in~\cite{Benjamin1972j}, and later used 
+in~\cite{Bona1987,Bridges2004,Nguyen2009}, and many other works.
 %%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{figure}[ht]
-\centering
-\subfigure[][Bifurcation curve in the wavespeed-waveheight parameter space]{\includegraphics[width=0.48\textwidth]{1024_2048}{}\label{sfig:bif-ch}}%
-~%
-\subfigure[][Bifurcation curve in a wavespeed-$L^2$-norm diagram]{\includegraphics[width=0.48\textwidth]{L2_1024_2048}{}} 
-\caption{\small
-Whitham bifurcation curves for $2\pi$-periodic solutions. 
-% $N = 1024, \mathcal{D}= 1$. 
-}
-\label{bif-L2-1024}
-\end{figure} 
+%\begin{figure}[ht]
+%\centering
+%\subfigure[][Bifurcation curve in the wavespeed-waveheight parameter space]{\includegraphics[width=0.48\textwidth]{1024_2048}{}\label{sfig:bif-ch}}%
+%~%
+%\subfigure[][Bifurcation curve in a wavespeed-$L^2$-norm diagram]{\includegraphics[width=0.48\textwidth]{L2_1024_2048}{}} 
+%\caption{\small
+%Whitham bifurcation curves for $2\pi$-periodic solutions. 
+%% $N = 1024, \mathcal{D}= 1$. 
+%}
+%\label{bif-L2-1024}
+%\end{figure} 
 %trim = 1.2cm 4.7cm 0.6cm 4.5cm, clip,
 %%%%%%%%%===========%%%%%%%%%%%%%%%
 Let us define two functionals $V$ and $E$:
@@ -567,7 +567,7 @@ as
 \label{zero}
 \end{align} 
 %%%%%%%%%===========%%%%%%%%%%%%%%%
-It is known from~\cite{BSS} that under certain conditions,
+It is known from~\cite{Bona1987} that under certain conditions,
 the stability of solitary wave solutions depends 
 on convexity of the function $d(c) = E(\phi) - c V(\phi)$. 
 Solutions with values of $c$ for which $d''(c) > 0$  are stable solutions,
@@ -588,7 +588,7 @@ Using~\eqref{zero} as indicated yields
 %%%%%%%%%===========%%%%%%%%%%%%%%%
 Therefore, in order to understand the convexity of $d(c)$, it is sufficient
 to find points of maximum $L^2$-norm on the curve in the right panel
-of \autoref{bif-L2-1024}.
+of Figure 4.
 It is straightforward to see that $d''(c)$ changes sign in the neighbourhood of the maximum point 
 of this curve, i.e., around the solution with maximum $L^2$-norm. 
 In particular, $d''(c) > 0$, i.e., solutions are stable to the left of the maximum point, 
@@ -598,7 +598,7 @@ In addition, the solutions were tested with the evolution integrator to confirm 
 The solution with maximum $L^2$-norm and those on the left-hand side were always found to be stable in 
 the time-dependent computations.
 Solutions on the right-hand side do not preserve their shape and thus are unstable. 
-Examples are given in \autoref{time-evo}. 
+Examples are given in Figure 6. 
 This analysis confirms that 
 the point corresponding to the minumum wave speed (the turning point), 
 and the point of stability inversion are two distinct points on the bifurcation curve.
@@ -606,14 +606,14 @@ Moreover, the point of stability inversion
 is a little further up the branch from the turning point.
 
 %%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{figure}[t]
-\centering
-\subfigure[][Profiles of the solutions singled out in \autoref{bif-L2-1024}\subref{sfig:bif-ch}]{\includegraphics[width=0.48\textwidth]{1024_waves_1}{}\label{sfig:prof-sing}}
-~%
-\subfigure[][Profile after terminal solution]{\includegraphics[width=0.48\textwidth]{1024_waves_2}{}\label{sfig:prof-term}}
-\caption{\small Profiles of specific traveling wave solutions.}
-\label{3waves}
-\end{figure} 
+%\begin{figure}[t]
+%\centering
+%\subfigure[][Profiles of the solutions singled out in \autoref{bif-L2-1024}\subref{sfig:bif-ch}]{\includegraphics[width=0.48\textwidth]{1024_waves_1}{}\label{sfig:prof-sing}}
+%~%
+%\subfigure[][Profile after terminal solution]{\includegraphics[width=0.48\textwidth]{1024_waves_2}{}\label{sfig:prof-term}}
+%\caption{\small Profiles of specific traveling wave solutions.}
+%\label{3waves}
+%\end{figure} 
 %%%%%%%%%===========%%%%%%%%%%%%%%%
 
 
@@ -626,7 +626,7 @@ does the terminal point on the branch correspond to a cusped traveling wave.
 First of all, note that the solution, which is computed by \textsf{SpecTraVVave}, 
 past the terminal solution has two crests, no matter how small the 
 stepping on the bifurcation branch is taken.
-(see \autoref{3waves}\subref{sfig:prof-term}).   
+(see Figure 5(b)).   
 Secondly, as will be explained presently, the relation 
 %%%%%%%%%===========%%%%%%%%%%%%%%%
 \begin{equation*}
@@ -675,22 +675,22 @@ are between the maximum $L^2$-norm solution and the terminal solution.
 
 
 %%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{figure}[t]
-  \subfigure[][Minimum speed solution]{\includegraphics[width=0.31\textwidth]{1024_full_3p_1}}
-~%
-\subfigure[][Maximum $L^2$-norm solution]{\includegraphics[width=0.31\textwidth]{1024_full_3p_2}{}}
-~%
-\subfigure[][Terminal solution]{\includegraphics[width=0.31\textwidth]{1024_full_3p_3}{}}
-\caption{\small Evolution of specific solutions in time. Time range for each solution is three periods.}
-\label{time-evo}
-\end{figure} 
+%\begin{figure}[t]
+%  \subfigure[][Minimum speed solution]{\includegraphics[width=0.31\textwidth]{1024_full_3p_1}}
+%~%
+%\subfigure[][Maximum $L^2$-norm solution]{\includegraphics[width=0.31\textwidth]{1024_full_3p_2}{}}
+%~%
+%\subfigure[][Terminal solution]{\includegraphics[width=0.31\textwidth]{1024_full_3p_3}{}}
+%\caption{\small Evolution of specific solutions in time. Time range for each solution is three periods.}
+%\label{time-evo}
+%\end{figure} 
 %%%%%%%%%===========%%%%%%%%%%%%%%%
 
 The numerical evidence brought forward supports the conclusion 
 that the Whitham bifurcation branch terminates at the terminal point
-indicated in \autoref{bif-curve-all}. Of course, as already mentioned,
+indicated in Figure 3. Of course, as already mentioned,
 this conclusion has now also been reached using tools of mathematical analysis
-\cite{EW2016}.
+\cite{Wahlen2016}.
 
 
 
@@ -713,7 +713,7 @@ this conclusion has now also been reached using tools of mathematical analysis
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Interaction of solitary wave solutions of modified Benjamin--Ono equation}
+\subsubsection{Interaction of solitary wave solutions of modified Benjamin--Ono equation}
 \label{mB-O-interact}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -728,27 +728,27 @@ which is a special case of the generalized Benjamin--Ono equation, with $p=2$.
 This case corresponds to the critical scaling, i.e., invariance of 
 the energy norm under the natural invariant scaling.
 
-The Benjamin--Ono equation was found by Benjamin~\cite{B1} as a model
+The Benjamin--Ono equation was found by Benjamin~\cite{Benjamin1967} as a model
 for long small-amplitude interfacial waves in deep water. 
 The validity of approximating the more physically correct configuration of a continuous
 density distribution by the two-layer approximation has recently been justified mathematically
-\cite{ChenWalsh2016}. 
+\cite{Chen2016}. 
 	
 
 Solitary-wave solutions of the modified Benjamin--Ono equation with $p=3$, $p=4$ and $p=5$
-were approximated in~\cite{BoKa} with a standard Newton scheme.
-The solutions in~\cite{BoKa} were not very accurate, 
+were approximated in~\cite{Bona2004} with a standard Newton scheme.
+The solutions in~\cite{Bona2004} were not very accurate, 
 but since singularity formation of the evolution
 equations were under study,
 the accuracy of the solitary-wave approximation was not an important issue.
-The problem with the method of~\cite{BoKa} and some other works was that the fft
+The problem with the method of~\cite{Bona2004} and some other works was that the fft
 used there was not purged of possible symmetries (translational and reflective).
 In the current code, since a cosine formulation is chosen, these symmetries
 are automatically eliminated, and the resulting computations are able to to
 render more accurate approximations. 
 
 Solitary-wave solutions of these equation could be computed with higher accuracy
-using a type of Petviashvili method in~\cite{Pelinovsky}, but here we employ
+using a type of Petviashvili method in~\cite{Pelinovsky2004}, but here we employ
 the \textsf{SpecTraVVave} package using the boundary equation~\eqref{solitary},
 and treating solitary waves as 
 traveling waves with sufficiently long wavelength 
@@ -759,14 +759,14 @@ interaction of two waves is studied.
 
 Two questions are investigated. First, the interaction is investigated for evidence
 of integrability. Second, we are looking for possible annihilation of one of the waves,
-such as may happen in some other evolution equations~\cite{Tjon}.
+such as may happen in some other evolution equations~\cite{Tjon1979}.
 
 
 
 A possible approach to studying the question of complete integrability
 is analyzing the interaction of two solitary wave solutions of the equation, 
-such as carried out in~\cite{HK,HKJB} for other nonlocal equations.	
-In \autoref{solitons-full}, snapshots of interaction of two solitary waves at different times are shown.
+such as carried out in~\cite{Kalisch2005,Kalisch2000} for other nonlocal equations.	
+In Figure 7, snapshots of interaction of two solitary waves at different times are shown.
 The time difference between two consecutive snapshots is constant.    
 As it may be observed, during the process of interaction, the two initial solitary waves combine 
 into a single wave, and an additional oscillation is produced. 
@@ -777,27 +777,27 @@ mass is acquired by the larger wave. Thus one may argue that the small
 wave is annihilated by the larger wave. It can also be observed that
 the larger wave starts growing, and it is likely that this growth
 will lead to finite-time blow-up. This question was not investigated further
-since blow-up phenomena have already been studied closely in~\cite{HKJB}.
+since blow-up phenomena have already been studied closely in~\cite{Kalisch2000}.
 Indeed, very recently, the finite-time blow-up 
-has been proven mathematically in~\cite{MP}.
+has been proven mathematically in~\cite{Martel2016}.
 
 
 %%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{figure}[t]
-\centering
-		\includegraphics[width=0.6\textwidth]{soliton_inter}      
-\caption{\small Interaction of two solitary waves of the modified Benjamin--Ono equation.}
-\label{solitons-full}
-\end{figure} 
+%\begin{figure}[t]
+%\centering
+%		\includegraphics[width=0.6\textwidth]{soliton_inter}      
+%\caption{\small Interaction of two solitary waves of the modified Benjamin--Ono equation.}
+%\label{solitons-full}
+%\end{figure} 
 %%%%%%%%%===========%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Effect of competing dispersion in the Benjamin equation}
+\subsubsection{Effect of competing dispersion in the Benjamin equation}
 \label{Benjamin_eq}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The Benjamin equation was found by Benjamin~\cite{B3} as a model for two-layer flow in the case
+The Benjamin equation was found by Benjamin~\cite{Benjamin1992} as a model for two-layer flow in the case
 when the interface is subject to surface tension. The approximation may not be a good model for
 a stratified situation, but more applicable to the case where two fluids are separated by a
 sharp interface. 
@@ -806,13 +806,13 @@ The equation is
 u_t + u_x + uu_x - \mathcal{H} u_{xx} - \tau u_{xxx} = 0,
 \end{equation}
 where $\tau$ is a parameter similar to the Bond number in free surface flow~
-\cite{B3}, \cite{KalischBenjamin}, \cite{Walsh2014a}.
+\cite{Benjamin1992}, \cite{Kalisch2007}, \cite{Walsh2014}.
 	
 %%%%%%%%\vskip 0.05in
 
 In this section, a study relating to the effects of competing dispersion operators 
 on the shape of periodic traveling waves in the Benjamin equation is presented.
-An in-depth study of solitary waves was carried out in~\cite{DDM}.
+An in-depth study of solitary waves was carried out in~\cite{Dougalis2015}.
 As will come to light, the periodic case features some new phenomena, such as secondary
 bifurcations, connecting and crossing branches.
 For the purpose of this study, we fix the parameter $\tau=0.1$,
@@ -827,24 +827,24 @@ c(k) = 1 - |k| +  0.1  k^2. 	\label{Ben_disp_rel}
 Traveling wave solutions with full wavelengths $L_1 = \pi/5$, $L_2 = 4\pi /19$ and $L_3 = 4\pi$ 
 are computed for the equation~\eqref{benjamin}.  
 The corresponding wavenumbers are $k_1 = 10$, $k_2 = 19/2$, and $k_3 = 0.5$, respectively.
-A plot of the dispersion relation~\eqref{Ben_disp_rel} is given in \autoref{disp-rel}.
-Bifurcation branches of traveling wave solutions with the selected wavelengths are given in \autoref{fig:ben-bifur}.
+A plot of the dispersion relation~\eqref{Ben_disp_rel} is given in Figure 8.
+Bifurcation branches of traveling wave solutions with the selected wavelengths are given in Figure 9.
 
 	
 		
 %%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{figure}[ht]
-  \centering
-\includegraphics[width=0.47\textwidth]{{disp_rel_plot}}  \caption{Dispersion relation \eqref{Ben_disp_rel}}
-\label{disp-rel}
-\end{figure}
-
-\begin{figure}
-  \centering
-\includegraphics[width=0.47\textwidth]{Benj_bifur_plot}
-\caption{Bifurcation curves of the equation~\eqref{benjamin} with different wavelengths, $\blacktriangle$ --  points of bifurcation, $\bullet$ -- selected solutions (see \autoref{long-solutions}).}
-\label{fig:ben-bifur}
-\end{figure} 
+%\begin{figure}[ht]
+%  \centering
+%\includegraphics[width=0.47\textwidth]{{disp_rel_plot}}  \caption{Dispersion relation \eqref{Ben_disp_rel}}
+%\label{disp-rel}
+%\end{figure}
+%
+%\begin{figure}
+%  \centering
+%\includegraphics[width=0.47\textwidth]{Benj_bifur_plot}
+%\caption{Bifurcation curves of the equation~\eqref{benjamin} with different wavelengths, $\blacktriangle$ --  points of bifurcation, $\bullet$ -- selected solutions (see \autoref{long-solutions}).}
+%\label{fig:ben-bifur}
+%\end{figure} 
 %%%%%%%%%===========%%%%%%%%%%%%%%%
  
 
@@ -863,48 +863,45 @@ capillary regime. On the other hand, the $L_2$ branch falls in the gravity regim
 As the waveheight grows, solutions on the $L_3$ branch first cross the $L_1$ branch without
 connecting. Additional oscillations develop in the solutions until 
 a new fundamental wavelength $\pi/5$ is reached, and the branch terminates
-as it connects to the $L_1$ branch. The situation is depicted in \autoref{long-solutions}. 
+as it connects to the $L_1$ branch. The situation is depicted in Figure 10. 
 The point where the $L_1$ and $L_3$ branches meet
 is approximately $(c^*,a^*) = (0.945, 5.938)$.
-The corresponding profiles essentially overlap, as shown on \autoref{last-solutions}.
+The corresponding profiles essentially overlap, as shown on Figure 11.
 This point can also be interpreted as a secondary bifurcation point 
 of the $L_1$ branch, where solutions with wavelengths that are multiples of $\pi/5$ develop. 
 We should note that similar phenomena concerning crossing and connecting
-branches were previously observed in \cite{RK}
-for the Whitham equation with surface tension which was introduced in~\cite{HurJohnson}. 
+branches were previously observed in \cite{Remonato2016}
+for the Whitham equation with surface tension which was introduced in~\cite{Hur2015}. 
 	
 %%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{figure}[ht]
-\begin{subfigure}
-	\centering
-	\includegraphics[width=0.47\textwidth]{left_long_solutions}      
-	    \end{subfigure}%
-~%
-\begin{subfigure}
-        \centering
-		\includegraphics[width=0.47\textwidth]{right_long_solutions}{}      
-    \end{subfigure}%
-	\caption{\small Selected solutions of the equation~\eqref{benjamin}. 
-Labels preserved as shown in \autoref{fig:ben-bifur}.}
-\label{long-solutions}
-\end{figure} 
-
+%\begin{figure}[ht]
+%\begin{subfigure}
+%	\centering
+%	\includegraphics[width=0.47\textwidth]{left_long_solutions}      
+%	    \end{subfigure}%
+%~%
+%\begin{subfigure}
+%        \centering
+%		\includegraphics[width=0.47\textwidth]{right_long_solutions}{}      
+%    \end{subfigure}%
+%	\caption{\small Selected solutions of the equation~\eqref{benjamin}. 
+%Labels preserved as shown in \autoref{fig:ben-bifur}.}
+%\label{long-solutions}
+%\end{figure} 
 %%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{figure}[ht]
-        \centering
-		\includegraphics[width=0.47\textwidth]{last2}{}      
-	\caption{\small Solution profiles at the point $(c^*, a^*)$ where the $L_1$ and $L_3$ branches meet (see \autoref{fig:ben-bifur}).}
-\label{last-solutions}
-\end{figure} 
+%\begin{figure}[ht]
+%        \centering
+%		\includegraphics[width=0.47\textwidth]{last2}{}      
+%	\caption{\small Solution profiles at the point $(c^*, a^*)$ where the $L_1$ and $L_3$ branches meet (see \autoref{fig:ben-bifur}).}
+%\label{last-solutions}
+%\end{figure} 
 %%%%%%%%%===========%%%%%%%%%%%%%%%
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%                                                  %%%%%%%%%%%%%%%%%
 %%%%%%%%%%                                                  %%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\section{Conclusions and future work}
+\subsection{Conclusions and future work}
 \label{sec:conclusion}
 
 The numerical algorithm of \textsf{SpecTraVVave} features ample flexibility for researching 
@@ -913,7 +910,7 @@ The solver package is simpler in use when compared with programs such as \textsf
 \textsf{Wavetrain}, however it does not have the same level of generality. 
 Moreover, \textsf{AUTO} and \textsf{Wavetrain} are programmed in low-level programming languages
 and will therefore run more efficiently.
-\textsf{SpecTraVVave} is implemented in an object-oriented fashion~\cite{PyBook}, 
+\textsf{SpecTraVVave} is implemented in an object-oriented fashion~\cite{Verdier2014}, 
 which makes the program easily expandable.
 \textsf{IPython} provides means for interactive work with the package, 
 and enables users to create convenient notebook-programs.
@@ -938,7 +935,7 @@ additional oscillations, and later connected up with a branch of solutions with
 wavelength $\pi/5$.
 
 
-Future work on the \textsf{SpecTraVVave} package will be focused on development of its functionality and broadening the range of problems that can be studied. Possible extensions may include implementation of algorithms based on the Petviashvili method~\cite{Duran2014CNSNS}--\cite{Duran2014JCAM} and generalization to systems of equations.
+Future work on the \textsf{SpecTraVVave} package will be focused on development of its functionality and broadening the range of problems that can be studied. Possible extensions may include implementation of algorithms based on the Petviashvili method~\citep{Alvarez2014, Alvarez2014j} and generalization to systems of equations.
 
 %\newpage
 
@@ -957,362 +954,362 @@ and by the J C Kempe Memorial Fund on grant no. SMK-1238.
 
 
 
-\appendix
-\section*{Appendices}
-\addcontentsline{toc}{section}{Appendices}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Computing initial guesses from Stokes expansion.}
-\label{sec:stokes}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{equation}
-u_t+\left[f(u)\right]_{x} + \mathcal{L}u_x=0, \label{gen}
-\end{equation}
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-	 The goal of this section is to explain how the idea of Stokes's approximation works in providing the initial data (guess) on wave and phase velocity for solving the equation~\eqref{gen} numerically.
-
-	We will consider $\Lop$ being linear and self-adjoint Fourier multiplier operator, and a function $f$ that has degree of zeros $p \geq 2$:
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{align*}
-\widehat{\Lop u}(k) &= \alpha(k) \cdot \widehat{u}(k),\\
-\langle\Lop u, v \rangle_{L^2(0,L)} &= \langle u, \Lop v\rangle_{L^2(0,L)}, \\
-p &= \min_{k \in \NN}{f^{(k-1)}(0) =0 \text{ and } f^{(k)}(0)\neq 0}
-\end{align*}
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-	 Consider the equation~\eqref{gen} and its solution in the form $u(x,t) = \phi(x-ct)$, which is a traveling wave solution. Inserting $\phi(x-ct)$ into~\eqref{gen} leads to the equation:
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{equation*}
--c\phi' + f'(\phi)\phi'+\mathcal{L}\phi'= 0,
-\end{equation*}
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-	 which can be integrated to give:
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{equation}
--c\phi + f(\phi)+\mathcal{L}\phi= B, \quad B = \mathrm{const}. \label{int_gen-B}
-\end{equation}
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-	Consider $B = 0$ in equation~\eqref{int_gen-B}, and expansions of $\phi$ and $c$:
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{align}
-\phi = \xi = \varepsilon\xi_1 + \varepsilon^2\xi_2+ \cdots, \label{fi_exp}\\
-c = c_0 + \varepsilon c_1 + \varepsilon^2 c_2+\cdots. \label{c_exp}
-\end{align}
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-	 The next step is to insert~\eqref{fi_exp} and~\eqref{c_exp} to the equation~\eqref{int_gen-B} and write out the terms at powers of $\varepsilon$. 
-	The function $f(\phi)$ is expanded around zero and, therefore, will appear only in $\varepsilon^p$ terms. 
-	Thus, the term at the first power of $\varepsilon$ reads: 
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{align}
-\varepsilon: \quad -c_0\xi_1 + \mathcal{L}\xi_1 = 0, \label{epsilon1}
-\end{align}
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-	 Hence, $c_0$ is an eigenvalue of the operator $\Lop$, regarded as defined on $L$-periodic functions. 
+%\appendix
+%\section*{Appendices}
+%\addcontentsline{toc}{section}{Appendices}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Computing initial guesses from Stokes expansion.}
+%\label{sec:stokes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 %%%%%%%%%%===========%%%%%%%%%%%%%%%
-	 Taking the Fourier transform of the equation~\eqref{epsilon1} gives:
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{equation}
--c_0\widehat{\xi_1}(k) + \alpha(k)\widehat{\xi_1}(k) = 0 . \label{eps1-transformed}
-\end{equation}
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-%\quad\rightarrow\quad \widehat{\xi_1}(k) \equiv 0 \mbox{ or } (-c_0+\widehat{\mathcal{L}}(k)) = 0. 
-	 The equation~\eqref{eps1-transformed} has two trivial solutions: either $\xi_1(k) \equiv 0$ or $\alpha(k) \equiv c_0$. If we assume non-trivial $\xi_1$ and $\alpha(k) \neq \text{const}$, the following solves the problem:
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{align}
-  \widehat{\xi_1}(k) = 2\pi\delta(k - k_0), \quad \text{and} \quad c_0 = \alpha(k_0), \label{solution-xi}
-\end{align}
-	 for some $k_0 \in \R$. 
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-	Since $\xi_1$ is the first-order approximation to $\phi$, the corresponding wave number should be equal to 1. The $L$-periodicity condition entails that $k_0 = 2\pi/L\cdot 1$. The spatial variable $x$ has to be scaled to $x'= L/2\pi x$, accordingly. From the solutions in~\eqref{solution-xi} we have 
-\begin{equation}
-	\xi_1(x') = e^{ik_0x'} = \cos(k_0x') + \sin(k_0x').
-\end{equation}	
-Considering the projection onto the space $\SN$, we are led to choose $\xi_1(x') = \cos(k_0x')$.
-%
-%
-%
-
+%\begin{equation}
+%u_t+\left[f(u)\right]_{x} + \mathcal{L}u_x=0, \label{gen}
+%\end{equation}
 %%%%%%%%%%===========%%%%%%%%%%%%%%%
-	 For further analysis, let us define an operator $\Aop$ 
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{equation*}
-	\Aop :=  - c_0 \mathcal{E} + \Lop,
-\end{equation*}
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-where $\mathcal{E}$ is the identity operator. The operator $\Aop$ inherits the property of being 
-self-adjoint from $\Lop$. Moreover, it follows from~\eqref{epsilon1} that $\Aop \xi_1 = 0$ and $\xi_1 \in \ker(\Aop)$. 
-If $p>2$ then $f''(0)=0$ and the terms at $\epsilon^2$ are:
-\begin{equation}
-\Aop \xi_2 - c_1\xi_1 = 0.
-\end{equation}
+%	 The goal of this section is to explain how the idea of Stokes's approximation works in providing the initial data (guess) on wave and phase velocity for solving the equation~\eqref{gen} numerically.
+%
+%	We will consider $\Lop$ being linear and self-adjoint Fourier multiplier operator, and a function $f$ that has degree of zeros $p \geq 2$:
 %%%%%%%%%%===========%%%%%%%%%%%%%%%
-	 Taking scalar multiplication of the latter with $\xi_1$, one obtains:
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{align*}
-	&\langle\xi_1, \Aop\xi_2 \rangle_{L^2(0,L)} = c_1 \| \xi_1\|^2_{L^2(0,L)}, \\
-	&\langle\xi_1, \Aop\xi_2\rangle_{L^2(0,L)} = \langle\Aop \xi_1, \xi_2\rangle_{L^2(0,L)} = \langle0, \xi_2\rangle_{L^2(0,L)} = 0.
-\end{align*}
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-	 As a result, one has $c_1 \| \xi_1\|^2_{L^2(0,L)} = 0$ and, hence, $c_1 = 0$.
-	Repeating the same argument, it becomes clear that $c_k = 0$ for any $k \leq p-1$.
-	Besides that, $\xi_2$ is in the kernel of $\Aop$, so it may be assumed to be proportional to $\xi_1$.
-	The terms at order $\varepsilon^p$ are:
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{align}
-  \Aop \xi_p - c_{p-1}\xi_1 + \frac{f^{(p)}(0)}{p!} \xi_1^p = 0. \label{epsp}
-\end{align}
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-	 Let us denote for brevity
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{align*}
-	f_p := \frac{f^{(p)}(0)}{p!}.
-\end{align*}
-%%%%%%%%%			%%%%%%%%%%%%%%%
-	 Pairing~\eqref{epsp} with $\xi_1$ (and assuming $\| \xi_1 \|_{L^2(0,L)} = 1$) gives
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{align}
-	c_{p-1} = f_p	\cdot \langle\xi_1^p, \xi_1\rangle_{L^2(0,L)}, \label{cp-1}
-\end{align}
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-	 which gives us the value of $c_{p-1}$.
-	It only remains to solve the following problem numerically in order to obtain $\xi_p$:
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{align}
-  \Aop \xi_p = c_{p-1}\xi_1 - f_p\xi_1^p \label{epsilonp}
-\end{align}
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-
-	For the last equation to be solved, the operator $\Aop$ has to be invertible. It is also required that $\langle\xi_1, \xi_p\rangle_{L^2(0,L)}=0$. 
-	Therefore the solution is sought in the space orthogonal to $\ker(\Aop)$.
-	Since $\Aop$ is still a Fourier multiplier operator, one can take the Fourier transform of the equation~\eqref{epsilonp} to find
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{align*}
-	\widehat\Aop(k) \widehat\xi_p(k)& = c_{p-1}\widehat\xi_1(k) - f_p				
-	\widehat{\xi_1^p}(k), \\
-	\widehat\xi_p(k)& = \widehat\Aop(k)^{-1} \left(c_{p-1}\widehat\xi_1(k) - f_p	
-	\widehat{\xi_1^p}(k)\right).
-\end{align*}
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-	 
-Taking the inverse Fourier transform of $\widehat\xi_p(k)$ gives $\xi_p$.
-Since only even solutions of the problem are considered the cosine part of the Fourier transforms will be required.
-It is sufficient to use $\xi_1$ and $c_0$ as the initial guesses for the Newton method. However, it should be noted that for different values of $p$ the pair of parameters $\xi_p$ and $c_{p-1}$ are computed in different ways.
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{enumerate}[label=\alph*)]
-	\item If $p = 2$, then $\xi_2$ is computed from~\eqref{epsilonp}, but $c_{p-1}$ here becomes zero. Therefore one has to consider the next level of the expansion $\varepsilon^p$.
-	\item For odd values of $p$ the parameter $c_{p-1}$ can be computed from~\eqref{cp-1} and $\xi_p$ from~\eqref{epsilonp}.
-	\item For even values of $p \geq 4$ the parameter $\xi_p$ can be computed, but $c_{p-1}$ may not be non-zero in general. 
-	In such cases a different strategy of fixing the initial guess should be used.
-\end{enumerate}
-
-
-
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Presentation of \textsf{SpecTraVVave} and its workflow}
-\label{sec:implementation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
-\subsection{Overview}
-There are several classes in the \textsf{SpecTraVVave} package. An overview of the program is shown 
-in \autoref{schematic}. The workflow begins with defining a flux function $f$ and the Fourier multiplier function $\alpha$ to set up an equation. 
-The traveling wave solution is characterized by the wavelength $L$ 
-and a boundary condition $\Omega(c, a, \phi_N, B)$. These parameters are fixed for a given problem.
-The defined equation is then discretized. 
-The \pyth{Discretization} object contains all required elements such as grid points, wave-numbers and the  discrete linear operator.
-		
-The initial guess and the equation's residual are passed from the \pyth{Discretization} to the \pyth{Solver} object. 
-The \pyth{Navigation} object is responsible for finding good initial guesses for $c$ and $a$ that are  
-passed to the \pyth{Solver} object. 
-The \pyth{Solver} object applies Newton's method to find a solution to the system of equations~\eqref{system-N3}. 
-	
-The new solution is sent back to the  \pyth{Discretization} and \pyth{Navigation} objects, where variables get updated.
-All computed solutions are stored for further analysis. 
-This finishes one iteration. 
-For the next iteration the updated variables are used and a new solution is found. 
-The process may be continued as long as the Jacobian of the problem is non-singular. 
- 
- %%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{figure}[ht]
-	\centering
-\includegraphics[width=0.8\textwidth]{block-scheme} 
-\caption{\small Overview of the \textsf{SpecTraVVave} package.}     
-\label{schematic}
-\end{figure} 
- %%%%%%%%%===========%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- \subsection{Class Description}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
- 
-We present an overview of the classes used in \textsf{SpecTraVVave} package. Note that, since the package is under continuous modification and development, we describe here only the  basic classes and functions the package. 
-We refer to the package repository \cite{github} for up-do-date tutorials and installation instructions.
- 
- The \pyth{Equation} class is the general class for all model equations. 
-Its only role is to store a parameter $L$, the wavelength:
-
-\begin{python}
-class Equation(object):
-    def __init__(self, L):
-        self.length = L
-\end{python}
-A subclass of the \pyth{Equation} class has to implement two functions, \pyth{compute_kernel} and \pyth{flux}. 
-
-The KdV model equation
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{align}
-	u_t + \frac{3}{2} u u_x + u_x + \frac{1}{6} u_{xxx} = 0
-\end{align}
-%%%%%%%%%===========%%%%%%%%%%%%%%%
-with $f(u) = \frac{3}{4} u^2$ and $\widehat{\Lop u}(k) = (1 - \frac{1}{6} k^2)\widehat{u}(k)$ is presented in the program as a subclass of the \pyth{Equation} class:
-\begin{python}
-class KDV(Equation):
-    def compute_kernel(self, k):
-        return 1-1/6*k*k
-
-    def flux(self, u):
-        return 3/4*u*u  
-\end{python} 
-
- 
- 
- 
-On can then create an object of the class \pyth{KDV} with the command:
-\begin{python}
-kdv = KDV(L=np.pi)
-\end{python} 
+%\begin{align*}
+%\widehat{\Lop u}(k) &= \alpha(k) \cdot \widehat{u}(k),\\
+%\langle\Lop u, v \rangle_{L^2(0,L)} &= \langle u, \Lop v\rangle_{L^2(0,L)}, \\
+%p &= \min_{k \in \NN}{f^{(k-1)}(0) =0 \text{ and } f^{(k)}(0)\neq 0}
+%\end{align*}
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%	 Consider the equation~\eqref{gen} and its solution in the form $u(x,t) = \phi(x-ct)$, which is a traveling wave solution. Inserting $\phi(x-ct)$ into~\eqref{gen} leads to the equation:
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%\begin{equation*}
+%-c\phi' + f'(\phi)\phi'+\mathcal{L}\phi'= 0,
+%\end{equation*}
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%	 which can be integrated to give:
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%\begin{equation}
+%-c\phi + f(\phi)+\mathcal{L}\phi= B, \quad B = \mathrm{const}. \label{int_gen-B}
+%\end{equation}
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%	Consider $B = 0$ in equation~\eqref{int_gen-B}, and expansions of $\phi$ and $c$:
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%\begin{align}
+%\phi = \xi = \varepsilon\xi_1 + \varepsilon^2\xi_2+ \cdots, \label{fi_exp}\\
+%c = c_0 + \varepsilon c_1 + \varepsilon^2 c_2+\cdots. \label{c_exp}
+%\end{align}
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%	 The next step is to insert~\eqref{fi_exp} and~\eqref{c_exp} to the equation~\eqref{int_gen-B} and write out the terms at powers of $\varepsilon$. 
+%	The function $f(\phi)$ is expanded around zero and, therefore, will appear only in $\varepsilon^p$ terms. 
+%	Thus, the term at the first power of $\varepsilon$ reads: 
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%\begin{align}
+%\varepsilon: \quad -c_0\xi_1 + \mathcal{L}\xi_1 = 0, \label{epsilon1}
+%\end{align}
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%	 Hence, $c_0$ is an eigenvalue of the operator $\Lop$, regarded as defined on $L$-periodic functions. 
+%%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%	 Taking the Fourier transform of the equation~\eqref{epsilon1} gives:
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%\begin{equation}
+%-c_0\widehat{\xi_1}(k) + \alpha(k)\widehat{\xi_1}(k) = 0 . \label{eps1-transformed}
+%\end{equation}
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%%\quad\rightarrow\quad \widehat{\xi_1}(k) \equiv 0 \mbox{ or } (-c_0+\widehat{\mathcal{L}}(k)) = 0. 
+%	 The equation~\eqref{eps1-transformed} has two trivial solutions: either $\xi_1(k) \equiv 0$ or $\alpha(k) \equiv c_0$. If we assume non-trivial $\xi_1$ and $\alpha(k) \neq \text{const}$, the following solves the problem:
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%\begin{align}
+%  \widehat{\xi_1}(k) = 2\pi\delta(k - k_0), \quad \text{and} \quad c_0 = \alpha(k_0), \label{solution-xi}
+%\end{align}
+%	 for some $k_0 \in \R$. 
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%	Since $\xi_1$ is the first-order approximation to $\phi$, the corresponding wave number should be equal to 1. The $L$-periodicity condition entails that $k_0 = 2\pi/L\cdot 1$. The spatial variable $x$ has to be scaled to $x'= L/2\pi x$, accordingly. From the solutions in~\eqref{solution-xi} we have 
+%\begin{equation}
+%	\xi_1(x') = e^{ik_0x'} = \cos(k_0x') + \sin(k_0x').
+%\end{equation}	
+%Considering the projection onto the space $\SN$, we are led to choose $\xi_1(x') = \cos(k_0x')$.
+%%
+%%
+%%
 %
-The solver will compute only a half of a solutions profile. The full wavelength of the solutions 
-of the defined equation will be equal to $2\pi$. 
-
-In order to find solutions with specific features, boundary conditions are introduced as separate classes.
-For instance, the boundary condition specifying a constant of integration is implemented as follows:
-\begin{python}
-class Const(object):
-""" The boundary condition under which the constant of integration 
-(B) is always set to zero. """
-    def __init__(self, level=0):
-        self.level = level
-
-    def enforce(self, wave, variables, parameters):
-    """ Enforces the Const boundary condition. """
-        return np.hstack([variables[0] - self.level])
-
-    def variables_num(self):
-    """ The number of additional variables that are required to construct 
-    the Const boundary condition. """
-        return 1
-\end{python}
-A \pyth{Const} boundary condition object is created as follows:
-\begin{python}
-boundary_condition = Const()
-\end{python}
-
-The next step is to create an object of \pyth{Discretization} class, which is initialized with a model equation such as \pyth{kdv_model} and the number of grid points. The main parts of the class are the following:
-\begin{python}
-class Discretization(object):
-    def __init__(self, model_equation, grid_size):
-        self.equation = model_equation
-        self.size = grid_size
-
-    def operator(self, u):
-        u_ = scipy.fftpack.dct(u, norm='ortho')
-        Lv = self.fourier_multiplier()*u_
-        result = scipy.fftpack.idct(Lv, norm='ortho')
-        return result
-
-    def residual(self, u, wavespeed, const_B):
-        residual = - wavespeed*u + self.equation.flux(u) 
-                                        + self.operator(u) - const_B
-        return  residual
-\end{python}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The call \pyth{Discretization.operator(u)} computes $\Lop u $ as the inverse transform of a transformed convolution 
-\begin{equation}
-\Lop u = \mathcal{F}^{-1}[ \widehat{\Lop u}(k)] = \mathcal{F}^{-1}\left[ \alpha(k)\cdot\widehat{u}(k)\right].
-\end{equation}
-The result of the call \pyth{Discretization.residual(u, wavespeed, const_B)} is then used in the \pyth{Solver} class. 
-An object of the \pyth{Solver} class is initialized with an object of the \pyth{Discretization} class, and a boundary condition object.
-
-\begin{python}
-class Solver(object):
-    def __init__(self, discrete_problem, boundary_condition):
-        self.discretization = discrete_problem
-        self.boundary = boundary_condition
-
-    def solve(self, guess_wave, parameter_anchor, direction):
-    """ Runs a Newton solver on a system of nonlinear equations once. 
-    Takes the residual(vector) as the system to solve. parameter_anchor 
-    is the initial guess for (c,a) values and it is taken from the 
-    Navigation class. """
-        size = len(guess_wave)
-        self.discretization.size = size
-
-        def residual(vector):
-        """ Contructs a system of nonlinear equations. First part, 
-        main_residual, is from given wave equation; second part, 
-        boundary_residual, comes from the chosen boundary conditions. """
-        . . .   
-        return np.hstack([main_residual, boundary_residual, 
-                                          amplitude_residual])  
-    . . .
-    return new_wave, new_boundary_variables, new_parameter
-\end{python}
+%%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%	 For further analysis, let us define an operator $\Aop$ 
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%\begin{equation*}
+%	\Aop :=  - c_0 \mathcal{E} + \Lop,
+%\end{equation*}
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%where $\mathcal{E}$ is the identity operator. The operator $\Aop$ inherits the property of being 
+%self-adjoint from $\Lop$. Moreover, it follows from~\eqref{epsilon1} that $\Aop \xi_1 = 0$ and $\xi_1 \in \ker(\Aop)$. 
+%If $p>2$ then $f''(0)=0$ and the terms at $\epsilon^2$ are:
+%\begin{equation}
+%\Aop \xi_2 - c_1\xi_1 = 0.
+%\end{equation}
+%%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%	 Taking scalar multiplication of the latter with $\xi_1$, one obtains:
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%\begin{align*}
+%	&\langle\xi_1, \Aop\xi_2 \rangle_{L^2(0,L)} = c_1 \| \xi_1\|^2_{L^2(0,L)}, \\
+%	&\langle\xi_1, \Aop\xi_2\rangle_{L^2(0,L)} = \langle\Aop \xi_1, \xi_2\rangle_{L^2(0,L)} = \langle0, \xi_2\rangle_{L^2(0,L)} = 0.
+%\end{align*}
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%	 As a result, one has $c_1 \| \xi_1\|^2_{L^2(0,L)} = 0$ and, hence, $c_1 = 0$.
+%	Repeating the same argument, it becomes clear that $c_k = 0$ for any $k \leq p-1$.
+%	Besides that, $\xi_2$ is in the kernel of $\Aop$, so it may be assumed to be proportional to $\xi_1$.
+%	The terms at order $\varepsilon^p$ are:
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%\begin{align}
+%  \Aop \xi_p - c_{p-1}\xi_1 + \frac{f^{(p)}(0)}{p!} \xi_1^p = 0. \label{epsp}
+%\end{align}
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%	 Let us denote for brevity
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%\begin{align*}
+%	f_p := \frac{f^{(p)}(0)}{p!}.
+%\end{align*}
+%%%%%%%%%%			%%%%%%%%%%%%%%%
+%	 Pairing~\eqref{epsp} with $\xi_1$ (and assuming $\| \xi_1 \|_{L^2(0,L)} = 1$) gives
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%\begin{align}
+%	c_{p-1} = f_p	\cdot \langle\xi_1^p, \xi_1\rangle_{L^2(0,L)}, \label{cp-1}
+%\end{align}
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%	 which gives us the value of $c_{p-1}$.
+%	It only remains to solve the following problem numerically in order to obtain $\xi_p$:
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%\begin{align}
+%  \Aop \xi_p = c_{p-1}\xi_1 - f_p\xi_1^p \label{epsilonp}
+%\end{align}
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
 %
-Some omitted parts in the above script are substituted by \textsf{'. . .'} sign. Each iteration on a \pyth{Solver} object is run from a \pyth{Navigation} object, which takes the \pyth{Solver} object for initialization. 
-\begin{python}
-class Navigation(object):
-""" Runs the Solver and stores the results. """
-
-    def __init__(self, solver_object, size=32):
-    self.solve = solver_object.solve # function to run Newton method
-    self.size = size # size for navigation
-    . . . 
-    def run_solver(self, current_wave, pstar, direction):
-        new_wave, variables, p3 = self.solve(current_wave, pstar, direction)
-        return new_wave, variables, p3
-\end{python}
-
-
-All the above classes can be modified and developed further, new classes may be defined as well.
-
-\subsection{Detailed Workflow}
-
-The workflow with the package consists of three basic steps:
-\begin{enumerate}
-\item Once the necessary classes have been imported in the current namespace, generate all necessary objects:
-\begin{python}
-equation = KDV(L=np.pi)
-boundary_condition = Const()
-discretization = Discretization(equation, grid_size=64)
-solver = Solver(discretization, boundary_condition)
-navigator = Navigation(solver)    
-\end{python}
-\item Choose a number of iterations, i.e., the number of solutions to compute, and run the solver:
-\begin{python}
-n_iter = 50
-navigator.run(n_iter)
-\end{python}
-\item All computed solutions are stored in \pyth{navigation_object}
-\begin{python}
-last_computed = -1    
-wave_profile = navigator[last_computed]['solution']
-wave_speed = navigator[last_computed]['current'][0]
-wave_amplitude = navigator[last_computed]['current'][1]
-\end{python}
-\end{enumerate} 
-
-We further refer to the code repository \url{https://github.com/olivierverdier/SpecTraVVave} for up-to-date instructions on how to run the code.
-
+%	For the last equation to be solved, the operator $\Aop$ has to be invertible. It is also required that $\langle\xi_1, \xi_p\rangle_{L^2(0,L)}=0$. 
+%	Therefore the solution is sought in the space orthogonal to $\ker(\Aop)$.
+%	Since $\Aop$ is still a Fourier multiplier operator, one can take the Fourier transform of the equation~\eqref{epsilonp} to find
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%\begin{align*}
+%	\widehat\Aop(k) \widehat\xi_p(k)& = c_{p-1}\widehat\xi_1(k) - f_p				
+%	\widehat{\xi_1^p}(k), \\
+%	\widehat\xi_p(k)& = \widehat\Aop(k)^{-1} \left(c_{p-1}\widehat\xi_1(k) - f_p	
+%	\widehat{\xi_1^p}(k)\right).
+%\end{align*}
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%	 
+%Taking the inverse Fourier transform of $\widehat\xi_p(k)$ gives $\xi_p$.
+%Since only even solutions of the problem are considered the cosine part of the Fourier transforms will be required.
+%It is sufficient to use $\xi_1$ and $c_0$ as the initial guesses for the Newton method. However, it should be noted that for different values of $p$ the pair of parameters $\xi_p$ and $c_{p-1}$ are computed in different ways.
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%\begin{enumerate}[label=\alph*)]
+%	\item If $p = 2$, then $\xi_2$ is computed from~\eqref{epsilonp}, but $c_{p-1}$ here becomes zero. Therefore one has to consider the next level of the expansion $\varepsilon^p$.
+%	\item For odd values of $p$ the parameter $c_{p-1}$ can be computed from~\eqref{cp-1} and $\xi_p$ from~\eqref{epsilonp}.
+%	\item For even values of $p \geq 4$ the parameter $\xi_p$ can be computed, but $c_{p-1}$ may not be non-zero in general. 
+%	In such cases a different strategy of fixing the initial guess should be used.
+%\end{enumerate}
+%
+%
+%
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Presentation of \textsf{SpecTraVVave} and its workflow}
+%\label{sec:implementation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%\subsection{Overview}
+%There are several classes in the \textsf{SpecTraVVave} package. An overview of the program is shown 
+%in \autoref{schematic}. The workflow begins with defining a flux function $f$ and the Fourier multiplier function $\alpha$ to set up an equation. 
+%The traveling wave solution is characterized by the wavelength $L$ 
+%and a boundary condition $\Omega(c, a, \phi_N, B)$. These parameters are fixed for a given problem.
+%The defined equation is then discretized. 
+%The \pyth{Discretization} object contains all required elements such as grid points, wave-numbers and the  discrete linear operator.
+%		
+%The initial guess and the equation's residual are passed from the \pyth{Discretization} to the \pyth{Solver} object. 
+%The \pyth{Navigation} object is responsible for finding good initial guesses for $c$ and $a$ that are  
+%passed to the \pyth{Solver} object. 
+%The \pyth{Solver} object applies Newton's method to find a solution to the system of equations~\eqref{system-N3}. 
+%	
+%The new solution is sent back to the  \pyth{Discretization} and \pyth{Navigation} objects, where variables get updated.
+%All computed solutions are stored for further analysis. 
+%This finishes one iteration. 
+%For the next iteration the updated variables are used and a new solution is found. 
+%The process may be continued as long as the Jacobian of the problem is non-singular. 
+% 
+% %%%%%%%%%===========%%%%%%%%%%%%%%%
+%\begin{figure}[ht]
+%	\centering
+%\includegraphics[width=0.8\textwidth]{block-scheme} 
+%\caption{\small Overview of the \textsf{SpecTraVVave} package.}     
+%\label{schematic}
+%\end{figure} 
+% %%%%%%%%%===========%%%%%%%%%%%%%%%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Class Description}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% 
+%We present an overview of the classes used in \textsf{SpecTraVVave} package. Note that, since the package is under continuous modification and development, we describe here only the  basic classes and functions the package. 
+%We refer to the package repository \cite{github} for up-do-date tutorials and installation instructions.
+% 
+% The \pyth{Equation} class is the general class for all model equations. 
+%Its only role is to store a parameter $L$, the wavelength:
+%
+%\begin{python}
+%class Equation(object):
+%    def __init__(self, L):
+%        self.length = L
+%\end{python}
+%A subclass of the \pyth{Equation} class has to implement two functions, \pyth{compute_kernel} and \pyth{flux}. 
+%
+%The KdV model equation
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%\begin{align}
+%	u_t + \frac{3}{2} u u_x + u_x + \frac{1}{6} u_{xxx} = 0
+%\end{align}
+%%%%%%%%%%===========%%%%%%%%%%%%%%%
+%with $f(u) = \frac{3}{4} u^2$ and $\widehat{\Lop u}(k) = (1 - \frac{1}{6} k^2)\widehat{u}(k)$ is presented in the program as a subclass of the \pyth{Equation} class:
+%\begin{python}
+%class KDV(Equation):
+%    def compute_kernel(self, k):
+%        return 1-1/6*k*k
+%
+%    def flux(self, u):
+%        return 3/4*u*u  
+%\end{python} 
+%
+% 
+% 
+% 
+%On can then create an object of the class \pyth{KDV} with the command:
+%\begin{python}
+%kdv = KDV(L=np.pi)
+%\end{python} 
+%%
+%The solver will compute only a half of a solutions profile. The full wavelength of the solutions 
+%of the defined equation will be equal to $2\pi$. 
+%
+%In order to find solutions with specific features, boundary conditions are introduced as separate classes.
+%For instance, the boundary condition specifying a constant of integration is implemented as follows:
+%\begin{python}
+%class Const(object):
+%""" The boundary condition under which the constant of integration 
+%(B) is always set to zero. """
+%    def __init__(self, level=0):
+%        self.level = level
+%
+%    def enforce(self, wave, variables, parameters):
+%    """ Enforces the Const boundary condition. """
+%        return np.hstack([variables[0] - self.level])
+%
+%    def variables_num(self):
+%    """ The number of additional variables that are required to construct 
+%    the Const boundary condition. """
+%        return 1
+%\end{python}
+%A \pyth{Const} boundary condition object is created as follows:
+%\begin{python}
+%boundary_condition = Const()
+%\end{python}
+%
+%The next step is to create an object of \pyth{Discretization} class, which is initialized with a model equation such as \pyth{kdv_model} and the number of grid points. The main parts of the class are the following:
+%\begin{python}
+%class Discretization(object):
+%    def __init__(self, model_equation, grid_size):
+%        self.equation = model_equation
+%        self.size = grid_size
+%
+%    def operator(self, u):
+%        u_ = scipy.fftpack.dct(u, norm='ortho')
+%        Lv = self.fourier_multiplier()*u_
+%        result = scipy.fftpack.idct(Lv, norm='ortho')
+%        return result
+%
+%    def residual(self, u, wavespeed, const_B):
+%        residual = - wavespeed*u + self.equation.flux(u) 
+%                                        + self.operator(u) - const_B
+%        return  residual
+%\end{python}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%The call \pyth{Discretization.operator(u)} computes $\Lop u $ as the inverse transform of a transformed convolution 
+%\begin{equation}
+%\Lop u = \mathcal{F}^{-1}[ \widehat{\Lop u}(k)] = \mathcal{F}^{-1}\left[ \alpha(k)\cdot\widehat{u}(k)\right].
+%\end{equation}
+%The result of the call \pyth{Discretization.residual(u, wavespeed, const_B)} is then used in the \pyth{Solver} class. 
+%An object of the \pyth{Solver} class is initialized with an object of the \pyth{Discretization} class, and a boundary condition object.
+%
+%\begin{python}
+%class Solver(object):
+%    def __init__(self, discrete_problem, boundary_condition):
+%        self.discretization = discrete_problem
+%        self.boundary = boundary_condition
+%
+%    def solve(self, guess_wave, parameter_anchor, direction):
+%    """ Runs a Newton solver on a system of nonlinear equations once. 
+%    Takes the residual(vector) as the system to solve. parameter_anchor 
+%    is the initial guess for (c,a) values and it is taken from the 
+%    Navigation class. """
+%        size = len(guess_wave)
+%        self.discretization.size = size
+%
+%        def residual(vector):
+%        """ Contructs a system of nonlinear equations. First part, 
+%        main_residual, is from given wave equation; second part, 
+%        boundary_residual, comes from the chosen boundary conditions. """
+%        . . .   
+%        return np.hstack([main_residual, boundary_residual, 
+%                                          amplitude_residual])  
+%    . . .
+%    return new_wave, new_boundary_variables, new_parameter
+%\end{python}
+%%
+%Some omitted parts in the above script are substituted by \textsf{'. . .'} sign. Each iteration on a \pyth{Solver} object is run from a \pyth{Navigation} object, which takes the \pyth{Solver} object for initialization. 
+%\begin{python}
+%class Navigation(object):
+%""" Runs the Solver and stores the results. """
+%
+%    def __init__(self, solver_object, size=32):
+%    self.solve = solver_object.solve # function to run Newton method
+%    self.size = size # size for navigation
+%    . . . 
+%    def run_solver(self, current_wave, pstar, direction):
+%        new_wave, variables, p3 = self.solve(current_wave, pstar, direction)
+%        return new_wave, variables, p3
+%\end{python}
+%
+%
+%All the above classes can be modified and developed further, new classes may be defined as well.
+%
+%\subsection{Detailed Workflow}
+%
+%The workflow with the package consists of three basic steps:
+%\begin{enumerate}
+%\item Once the necessary classes have been imported in the current namespace, generate all necessary objects:
+%\begin{python}
+%equation = KDV(L=np.pi)
+%boundary_condition = Const()
+%discretization = Discretization(equation, grid_size=64)
+%solver = Solver(discretization, boundary_condition)
+%navigator = Navigation(solver)    
+%\end{python}
+%\item Choose a number of iterations, i.e., the number of solutions to compute, and run the solver:
+%\begin{python}
+%n_iter = 50
+%navigator.run(n_iter)
+%\end{python}
+%\item All computed solutions are stored in \pyth{navigation_object}
+%\begin{python}
+%last_computed = -1    
+%wave_profile = navigator[last_computed]['solution']
+%wave_speed = navigator[last_computed]['current'][0]
+%wave_amplitude = navigator[last_computed]['current'][1]
+%\end{python}
+%\end{enumerate} 
+%
+%We further refer to the code repository \url{https://github.com/olivierverdier/SpecTraVVave} for up-to-date instructions on how to run the code.
+%
 
 
 %%%%%%%%%===========%%%%%%%%%%%%%%%
@@ -1340,300 +1337,300 @@ We further refer to the code repository \url{https://github.com/olivierverdier/S
 %\bibliography{}   % name your BibTeX data base
 
 % Non-BibTeX users please use
-\begin{thebibliography}{}
+%\begin{thebibliography}{}
+%%
+%% and use \bibitem to create references. Consult the Instructions
+%% for authors for reference list style.
+%%
 %
-% and use \bibitem to create references. Consult the Instructions
-% for authors for reference list style.
-%
-
-\bibitem{ABFS} Abdelouhab, L. Bona, J.L., Felland, M. and Saut, J.-C. 
-     {\em Nonlocal models for nonlinear dispersive waves}.
-     Physica D \textbf{40},360-392 (1989) 
-
-
-\bibitem{APR} Albert, J.P., Bona, J.L. and Restrepo, J.M. 
-{\em Solitary-wave solutions of the Benjamin equation}.
-SIAM J. Appl. Math. \textbf{59},2139--2161 (1999) 
-
-
-\bibitem{B1} Benjamin, T.B.
-          {\em Internal Waves of permanent form in fluids of great depth}.
-          J. Fluid Mech.  \textbf{29}, 559--592 (1967)
-
-
-\bibitem{B2} Benjamin, T.B.
-               {\em The stability of solitary waves}.
-              Proc. Roy. Soc. London A 328, 153-183 (1972) 
-
-\bibitem{B3} Benjamin, T.B. 
-          {\emph{A new kind of solitary wave}}.
-          J. Fluid Mech. \textbf{245}, 401--411  (1992)
-
-\bibitem{Duran2011JCAM} \'{A}lvarez, J. and  Dur\'{a}n, A.
-{\em A numerical scheme for periodic travelling-wave simulations in some nonlinear dispersive wave models}.
-J. Comput. Appl. Math. \textbf{235}, 1790--1797 (2011)
-
-\bibitem{Duran2014CNSNS} \'{A}lvarez, J. and  Dur\'{a}n, A.
-{\em An extended Petviashvili method for the numerical generation of traveling and localized waves}.
-Commun. Nonlinear Sci. Numer. Simul. \textbf{19}, 2272--2283 (2014)
-
-\bibitem{Duran2014JCAM} \'{A}lvarez, J. and  Dur\'{a}n, A.
-{\em, Petviashvili type methods for traveling wave computations: I. Analysis of convergence}.
-J. Comput. Appl. Math. \textbf{266}, 39--51 (2014)
-
-\bibitem{Duran2014JCAMCor} \'{A}lvarez, J. and  Dur\'{a}n, A.
-{\em Corrigendum to "Petviashvili type methods for traveling wave computations: I. Analysis of convergence},
-[J. Comput. Appl. Math. 266 (2014) 39--51]. J. Comput. Appl. Math. \textbf{277}, 215--216 (2015)
-
-
-\bibitem{BDKM} Bona, J.L., Dougalis, V.A.,  Karakashian, O.A. and McKinney, W.R.
-   {\em Conservative, high-order numerical schemes for the generalized
-   Korteweg--de Vries equation},
-   Philos. Trans. Royal Soc. London Ser. A, \textbf{351}, 107--164 (1995)
-
-
-\bibitem{BoKa} Bona, J.L. and Kalisch, H.
-              {\em Singularity formation in the generalized Benjamin--Ono equation}.
-              Discrete Contin. Dyn. Syst. \textbf{11}, 779--785 (2004)
-
-
-\bibitem{BSS}
-Bona, J.L., Souganidis, P.E. and Strauss, W.A.
-{\em Stability and instability of solitary waves of Korteweg--de Vries type}.
-Proc. R. Soc. Lond. A \textbf{411}, 395-412 (1987) 
+%\bibitem{ABFS} Abdelouhab, L. Bona, J.L., Felland, M. and Saut, J.-C. 
+%     {\em Nonlocal models for nonlinear dispersive waves}.
+%     Physica D \textbf{40},360-392 (1989) 
 %
 %
-\bibitem{HKN} Borluk, H., Kalisch, H. and Nicholls, D.P. 
-{\em A numerical study of the Whitham equation as a model for steady surface water waves}.
-J. Comput. Appl. Math. \textbf{296}, 293--302 (2016) 
-
-
-\bibitem{TJB}
-Bridges, T.J. 
-{\em Superharmonic instability, homoclinic torus bifurcation and water-wave breaking}.
-J. Fluid Mech. \textbf{505}, 153-162 (2004)
-
-
-\bibitem{Chen} Chen, H.
-{\em Existence of periodic travelling-wave solutions of nonlinear, dispersive wave equations}. 
-Nonlinearity \textbf{17}, 2041--2056 (2004)
-
-
-\bibitem{CB} Chen H. and Bona, J.L. 
-          {\em Existence and asymptotic properties of solitary-wave
-          solutions of Benjamin-type equations}.
-          Adv. Diff. Eq. \textbf{3},  51-84 (1998)
-
+%\bibitem{APR} Albert, J.P., Bona, J.L. and Restrepo, J.M. 
+%{\em Solitary-wave solutions of the Benjamin equation}.
+%SIAM J. Appl. Math. \textbf{59},2139--2161 (1999) 
 %
-
-\bibitem{ChenWalsh2016} Chen, R.M. and Walsh, S. 
-{\em Continuous dependence on the density for stratified steady water waves}.
-Arch. Ration. Mech. Anal. \textbf{219}, 741--792 (2016)
-
-
-\bibitem{CC2} Choi, W. and Camassa, R.
-          {\em Fully nonlinear internal waves in a two-fluid system}.
-          J. Fluid Mech.  \textbf{396}, 1-36 (1999)
-
-\bibitem{dFSS}
-de Frutos, J. and Sanz-Serna, J. M.
-{\em An easily implementable fourth-order method for the time integration of wave problems}.
-J. Comp. Phys. \textbf{103}, 160--168 (1992)
-
-
-
-\bibitem{Doed97}
-Doedel, E.J., Champneys, A.R., Fairgrieve, T.F., Kuznetsov, Y.A., Sandstede, B. and Wang, X.-J., 
-{\em AUTO97 : Continuation and bifurcation software for ordinary differential equations}, 
-available at 
-\url{http://indy.cs.concordia.ca/auto/}, Department of Computer Science and Software Engineering, Concordia University, Montreal, Canada, 1997. 
-
-
-\bibitem{DDM} Dougalis, V.A., Duran, A. and Mitsotakis, D. 
-{\em Numerical solution of the Benjamin equation}.
-Wave Motion \textbf{52}, 194--215 (2015)
-
-
-
-\bibitem{EK1}
-Ehrnstr{\"o}m, M. and Kalisch, H. 
-{\em Traveling waves for the Whitham equation}. 
-Differential Integral Equations \textbf{22}, 1193--1210 (2009)
-
-\bibitem{EK2}
-Ehrnstr{\"o}m, M. and Kalisch, H. 
-{\em Global bifurcation for the Whitham equation}.
-Math. Mod. Nat. Phenomena \textbf{8}, 13--30 (2013)
 %
-\bibitem{EW2016}
-Ehrnstr{\"o}m, M. and  Wahl\'en, E. 
-{\em On Whitham's conjecture of a highest cusped wave for a nonlocal dispersive equation}. arXiv:1602.05384
-(2016).
-
-\bibitem{PyBook}
-F\"uhrer, C., Solem, J.E., Verdier, O. 
-Computing with Python: An introduction to Python for science and engineering, Pearson (2014)
+%\bibitem{B1} Benjamin, T.B.
+%          {\em Internal Waves of permanent form in fluids of great depth}.
+%          J. Fluid Mech.  \textbf{29}, 559--592 (1967)
 %
-\bibitem{GK} Gruji\'{c}, Z. and Kalisch, H.
-{\em Gevrey regularity for a class of water-wave models}.
-Nonlinear Analysis \textbf{71}, 1160--1170 (2009)
-
-\bibitem{Hur2015} Hur, V.M. 
-{\em Breaking in the Whitham equation for shallow water waves}.
-arXiv:1506.04075 (2015).
-
-
-\bibitem{HurJohnson}
-Hur, V.M. and Johnson, M. 
-{\em Modulational instability in the Whitham equation of water waves}.
-Studies in Applied Mathematics \textbf{134}, 120--143 (2015)
-
-
-\bibitem{HurTao} Hur, V.M. and Tao, L.
-{\em Wave breaking for the Whitham equation with fractional dispersion}.
-arXiv:1410.1570, 2014.
-
-
-\bibitem{FW}
-Fornberg, B. and Whitham, G. B. 
-{\em A numerical and theoretical study of certain nonlinear wave phenomena}. 
-Phil. Trans. Roy. Soc. A \textbf{289}, 373--404 (1978)
-
-
-%\bibitem{ipython}
-%\url{https://ipython.org/}
-
-\bibitem{HK}
-Kalisch, H. 
-{\em Error analysis of a spectral projection of the regularized Benjamin--Ono equation}.
-BIT Numerical Mathematics \textbf{45}, 69--89 (2005)
-
-
-\bibitem{KalischBenjamin}
-Kalisch, H.
-{\em Derivation and comparison of model equations for interfacial capillary-gravity waves in deep water}.
-Math. Comput. Simulation \textbf{74},168--178 (2007)
-%(2-3):
-
-\bibitem{HKJB}
-Kalisch, H. and Bona, J.L.
-{\em Models for internal waves in deep water}. 
-Discrete and Continuous Dynamical Systems \textbf{6}, 1--20 (2000)
-
-\bibitem{Kato} Kato, T.
-{\em On the Cauchy problem for the (generalized) Korteweg--de Vries equation}.
-Studies in applied mathematics, 93--128, Adv. Math. Suppl. Stud., \textbf{8} 	
-(Academic Press, New York, 1983).
-
- 
-\bibitem{Keller} 
-Keller H.B., 
-{\em Numerical solution of bifurcation and nonlinear eigenvalue problems}. 
-Applications of Bifurcation Theory, Rabinowitz, P. H., Academic Press, (1977), pp. 359--384. 
-
-
-\bibitem{LS} Lannes, D. and Saut, J.-C.
-{\em Remarks on the full dispersion Kadomtsev--Petviashvli equation}.
-Kinet. Relat. Models \textbf{6}, 989--1009 (2013)
-
-
-
-\bibitem{MM} Martel, Y. and Merle, F.
-{\em Blow up in finite time and dynamics of blow up solutions for the L2-critical generalized KdV equation}.
-J. Amer. Math. Soc. \textbf{15}, 617--664 (2002)
-
-
-\bibitem{MP} Martel, Y. and Pilod, D.
-{\em Construction of a minimal mass blow up solution of the modified Benjamin-Ono equation}.
-arXiv:1605.01837 (2016).
-
-
-\bibitem{MKD2015} Moldabayev, D., Kalisch, H. and  Dutykh, D. 
-{\em The Whitham Equation as a model for surface water waves}.
-Phys. D  \textbf{309}, 99--107 (2015)
-
-
-\bibitem{github}
-Moldabayev, D., Verdier, O. and Kalisch, H.
-{\em SpecTraVVave}, available at \newline
-\url{https://github.com/olivierverdier/SpecTraVVave}. 
-
-
-\bibitem{NgK}
-Nguyen, N.T. and Kalisch, H.
-{\em Orbital stability of negative solitary waves}.
-Mathematics and Computers in Simulation \textbf{80}, 139-150 (2009) 
-
-
-\bibitem{O} Ono, H.
-         {\emph{Algebraic Solitary Waves in Stratified Fluids}}.
-         J. Phys. Soc. of Japan \textbf{39}, 1082-1091 (1975)
-
-
-\bibitem{Pelinovsky} Pelinovsky, D.E. and Stepanyants, Y.A. 
-{\em Convergence of Petviashvili's iteration method for numerical approximation 
-of stationary solutions of nonlinear wave equations}.
-SIAM J. Numer. Anal. \textbf{42}, 1110--1127 (2004)
-
-\bibitem{IPython} Fernando Pérez, Brian E. Granger
- \emph{IPython: A System for Interactive Scientific Computing}, 
-Computing in Science and Engineering, vol. 9, no. 3, pp. 21-29, May/June 2007.
-% doi:10.1109/MCSE.2007.53.
-URL: \url{http://ipython.org}
-
-\bibitem{Petviashvili} Petviashvili, V.I.
-{\em Equation of an extraordinary soliton}, 
-Sov. J. Plasma Phys. \textbf{2}, 257--258 (1976) 
-
-
-\bibitem{RK}
-Remonato, F. and Kalisch, H.
-{\em Numerical bifurcation for the capillary Whitham equation}.
-arXiv:1604.08324 (2016).
-
-
-\bibitem{Sanford}
-Sanford, N., Kodama, K., Carter, J.D. and Kalisch, H. 
-{\em Stability of traveling wave solutions to the Whitham equation}. 
-Phys. Lett. A \textbf{378}, 2100--2107 (2014)
-
-
-\bibitem{Sherratt} Sherratt, J.A. 
-{\em Numerical continuation methods for studying periodic travelling wave (wavetrain) 
-solutions of partial differential equations}.
-Appl. Math. Comp. \textbf{218}, 4684--4694 (2012)
-
-
-\bibitem{Tjon} Courtenay Lewis, J. and Tjon, J.A.
-              {\em Resonant production of solitons in the RLW equation}.
-              Phys. Lett. A \textbf{73}, 275--279 (1979)
-
-
-
-\bibitem{Walsh2014a} Walsh, S. 
-{\em Steady stratified periodic gravity waves with surface tension I: Local bifurcation}.
-Discrete Contin. Dyn. Syst. \textbf{34}, 3241--3285 (2014)
-
-
-
-\bibitem{Walsh2014b} Walsh, S. 
-{\em Steady stratified periodic gravity waves with surface tension II: global bifurcation}. 
-Discrete Contin. Dyn. Syst. \textbf{34}, 3287--3315 (2014)
-
-
-
-\bibitem{Wh1} 
-Whitham, G.B. 
-{\em Variational methods and applications to water waves}.
-Proc. Roy. Soc. London A \textbf{299}, 6--25 (1967)
-
-
-\bibitem{Wh2}
-Whitham, G.B. 
-Linear and Nonlinear Waves. Wiley, New York, (1974)
-
-
-
-\end{thebibliography}
-
-\end{document}
+%
+%\bibitem{B2} Benjamin, T.B.
+%               {\em The stability of solitary waves}.
+%              Proc. Roy. Soc. London A 328, 153-183 (1972) 
+%
+%\bibitem{B3} Benjamin, T.B. 
+%          {\emph{A new kind of solitary wave}}.
+%          J. Fluid Mech. \textbf{245}, 401--411  (1992)
+%
+%\bibitem{Duran2011JCAM} \'{A}lvarez, J. and  Dur\'{a}n, A.
+%{\em A numerical scheme for periodic travelling-wave simulations in some nonlinear dispersive wave models}.
+%J. Comput. Appl. Math. \textbf{235}, 1790--1797 (2011)
+%
+%\bibitem{Duran2014CNSNS} \'{A}lvarez, J. and  Dur\'{a}n, A.
+%{\em An extended Petviashvili method for the numerical generation of traveling and localized waves}.
+%Commun. Nonlinear Sci. Numer. Simul. \textbf{19}, 2272--2283 (2014)
+%
+%\bibitem{Duran2014JCAM} \'{A}lvarez, J. and  Dur\'{a}n, A.
+%{\em, Petviashvili type methods for traveling wave computations: I. Analysis of convergence}.
+%J. Comput. Appl. Math. \textbf{266}, 39--51 (2014)
+%
+%\bibitem{Duran2014JCAMCor} \'{A}lvarez, J. and  Dur\'{a}n, A.
+%{\em Corrigendum to "Petviashvili type methods for traveling wave computations: I. Analysis of convergence},
+%[J. Comput. Appl. Math. 266 (2014) 39--51]. J. Comput. Appl. Math. \textbf{277}, 215--216 (2015)
+%
+%
+%\bibitem{BDKM} Bona, J.L., Dougalis, V.A.,  Karakashian, O.A. and McKinney, W.R.
+%   {\em Conservative, high-order numerical schemes for the generalized
+%   Korteweg--de Vries equation},
+%   Philos. Trans. Royal Soc. London Ser. A, \textbf{351}, 107--164 (1995)
+%
+%
+%\bibitem{BoKa} Bona, J.L. and Kalisch, H.
+%              {\em Singularity formation in the generalized Benjamin--Ono equation}.
+%              Discrete Contin. Dyn. Syst. \textbf{11}, 779--785 (2004)
+%
+%
+%\bibitem{BSS}
+%Bona, J.L., Souganidis, P.E. and Strauss, W.A.
+%{\em Stability and instability of solitary waves of Korteweg--de Vries type}.
+%Proc. R. Soc. Lond. A \textbf{411}, 395-412 (1987) 
+%%
+%%
+%\bibitem{HKN} Borluk, H., Kalisch, H. and Nicholls, D.P. 
+%{\em A numerical study of the Whitham equation as a model for steady surface water waves}.
+%J. Comput. Appl. Math. \textbf{296}, 293--302 (2016) 
+%
+%
+%\bibitem{TJB}
+%Bridges, T.J. 
+%{\em Superharmonic instability, homoclinic torus bifurcation and water-wave breaking}.
+%J. Fluid Mech. \textbf{505}, 153-162 (2004)
+%
+%
+%\bibitem{Chen} Chen, H.
+%{\em Existence of periodic travelling-wave solutions of nonlinear, dispersive wave equations}. 
+%Nonlinearity \textbf{17}, 2041--2056 (2004)
+%
+%
+%\bibitem{CB} Chen H. and Bona, J.L. 
+%          {\em Existence and asymptotic properties of solitary-wave
+%          solutions of Benjamin-type equations}.
+%          Adv. Diff. Eq. \textbf{3},  51-84 (1998)
+%
+%%
+%
+%\bibitem{ChenWalsh2016} Chen, R.M. and Walsh, S. 
+%{\em Continuous dependence on the density for stratified steady water waves}.
+%Arch. Ration. Mech. Anal. \textbf{219}, 741--792 (2016)
+%
+%
+%\bibitem{CC2} Choi, W. and Camassa, R.
+%          {\em Fully nonlinear internal waves in a two-fluid system}.
+%          J. Fluid Mech.  \textbf{396}, 1-36 (1999)
+%
+%\bibitem{dFSS}
+%de Frutos, J. and Sanz-Serna, J. M.
+%{\em An easily implementable fourth-order method for the time integration of wave problems}.
+%J. Comp. Phys. \textbf{103}, 160--168 (1992)
+%
+%
+%
+%\bibitem{Doed97}
+%Doedel, E.J., Champneys, A.R., Fairgrieve, T.F., Kuznetsov, Y.A., Sandstede, B. and Wang, X.-J., 
+%{\em AUTO97 : Continuation and bifurcation software for ordinary differential equations}, 
+%available at 
+%\url{http://indy.cs.concordia.ca/auto/}, Department of Computer Science and Software Engineering, Concordia University, Montreal, Canada, 1997. 
+%
+%
+%\bibitem{DDM} Dougalis, V.A., Duran, A. and Mitsotakis, D. 
+%{\em Numerical solution of the Benjamin equation}.
+%Wave Motion \textbf{52}, 194--215 (2015)
+%
+%
+%
+%\bibitem{EK1}
+%Ehrnstr{\"o}m, M. and Kalisch, H. 
+%{\em Traveling waves for the Whitham equation}. 
+%Differential Integral Equations \textbf{22}, 1193--1210 (2009)
+%
+%\bibitem{EK2}
+%Ehrnstr{\"o}m, M. and Kalisch, H. 
+%{\em Global bifurcation for the Whitham equation}.
+%Math. Mod. Nat. Phenomena \textbf{8}, 13--30 (2013)
+%%
+%\bibitem{EW2016}
+%Ehrnstr{\"o}m, M. and  Wahl\'en, E. 
+%{\em On Whitham's conjecture of a highest cusped wave for a nonlocal dispersive equation}. arXiv:1602.05384
+%(2016).
+%
+%\bibitem{PyBook}
+%F\"uhrer, C., Solem, J.E., Verdier, O. 
+%Computing with Python: An introduction to Python for science and engineering, Pearson (2014)
+%%
+%\bibitem{GK} Gruji\'{c}, Z. and Kalisch, H.
+%{\em Gevrey regularity for a class of water-wave models}.
+%Nonlinear Analysis \textbf{71}, 1160--1170 (2009)
+%
+%\bibitem{Hur2015} Hur, V.M. 
+%{\em Breaking in the Whitham equation for shallow water waves}.
+%arXiv:1506.04075 (2015).
+%
+%
+%\bibitem{HurJohnson}
+%Hur, V.M. and Johnson, M. 
+%{\em Modulational instability in the Whitham equation of water waves}.
+%Studies in Applied Mathematics \textbf{134}, 120--143 (2015)
+%
+%
+%\bibitem{HurTao} Hur, V.M. and Tao, L.
+%{\em Wave breaking for the Whitham equation with fractional dispersion}.
+%arXiv:1410.1570, 2014.
+%
+%
+%\bibitem{FW}
+%Fornberg, B. and Whitham, G. B. 
+%{\em A numerical and theoretical study of certain nonlinear wave phenomena}. 
+%Phil. Trans. Roy. Soc. A \textbf{289}, 373--404 (1978)
+%
+%
+%%\bibitem{ipython}
+%%\url{https://ipython.org/}
+%
+%\bibitem{HK}
+%Kalisch, H. 
+%{\em Error analysis of a spectral projection of the regularized Benjamin--Ono equation}.
+%BIT Numerical Mathematics \textbf{45}, 69--89 (2005)
+%
+%
+%\bibitem{KalischBenjamin}
+%Kalisch, H.
+%{\em Derivation and comparison of model equations for interfacial capillary-gravity waves in deep water}.
+%Math. Comput. Simulation \textbf{74},168--178 (2007)
+%%(2-3):
+%
+%\bibitem{HKJB}
+%Kalisch, H. and Bona, J.L.
+%{\em Models for internal waves in deep water}. 
+%Discrete and Continuous Dynamical Systems \textbf{6}, 1--20 (2000)
+%
+%\bibitem{Kato} Kato, T.
+%{\em On the Cauchy problem for the (generalized) Korteweg--de Vries equation}.
+%Studies in applied mathematics, 93--128, Adv. Math. Suppl. Stud., \textbf{8} 	
+%(Academic Press, New York, 1983).
+%
+% 
+%\bibitem{Keller} 
+%Keller H.B., 
+%{\em Numerical solution of bifurcation and nonlinear eigenvalue problems}. 
+%Applications of Bifurcation Theory, Rabinowitz, P. H., Academic Press, (1977), pp. 359--384. 
+%
+%
+%\bibitem{LS} Lannes, D. and Saut, J.-C.
+%{\em Remarks on the full dispersion Kadomtsev--Petviashvli equation}.
+%Kinet. Relat. Models \textbf{6}, 989--1009 (2013)
+%
+%
+%
+%\bibitem{MM} Martel, Y. and Merle, F.
+%{\em Blow up in finite time and dynamics of blow up solutions for the L2-critical generalized KdV equation}.
+%J. Amer. Math. Soc. \textbf{15}, 617--664 (2002)
+%
+%
+%\bibitem{MP} Martel, Y. and Pilod, D.
+%{\em Construction of a minimal mass blow up solution of the modified Benjamin-Ono equation}.
+%arXiv:1605.01837 (2016).
+%
+%
+%\bibitem{MKD2015} Moldabayev, D., Kalisch, H. and  Dutykh, D. 
+%{\em The Whitham Equation as a model for surface water waves}.
+%Phys. D  \textbf{309}, 99--107 (2015)
+%
+%
+%\bibitem{github}
+%Moldabayev, D., Verdier, O. and Kalisch, H.
+%{\em SpecTraVVave}, available at \newline
+%\url{https://github.com/olivierverdier/SpecTraVVave}. 
+%
+%
+%\bibitem{NgK}
+%Nguyen, N.T. and Kalisch, H.
+%{\em Orbital stability of negative solitary waves}.
+%Mathematics and Computers in Simulation \textbf{80}, 139-150 (2009) 
+%
+%
+%\bibitem{O} Ono, H.
+%         {\emph{Algebraic Solitary Waves in Stratified Fluids}}.
+%         J. Phys. Soc. of Japan \textbf{39}, 1082-1091 (1975)
+%
+%
+%\bibitem{Pelinovsky} Pelinovsky, D.E. and Stepanyants, Y.A. 
+%{\em Convergence of Petviashvili's iteration method for numerical approximation 
+%of stationary solutions of nonlinear wave equations}.
+%SIAM J. Numer. Anal. \textbf{42}, 1110--1127 (2004)
+%
+%\bibitem{IPython} Fernando Pérez, Brian E. Granger
+% \emph{IPython: A System for Interactive Scientific Computing}, 
+%Computing in Science and Engineering, vol. 9, no. 3, pp. 21-29, May/June 2007.
+%% doi:10.1109/MCSE.2007.53.
+%URL: \url{http://ipython.org}
+%
+%\bibitem{Petviashvili} Petviashvili, V.I.
+%{\em Equation of an extraordinary soliton}, 
+%Sov. J. Plasma Phys. \textbf{2}, 257--258 (1976) 
+%
+%
+%\bibitem{RK}
+%Remonato, F. and Kalisch, H.
+%{\em Numerical bifurcation for the capillary Whitham equation}.
+%arXiv:1604.08324 (2016).
+%
+%
+%\bibitem{Sanford}
+%Sanford, N., Kodama, K., Carter, J.D. and Kalisch, H. 
+%{\em Stability of traveling wave solutions to the Whitham equation}. 
+%Phys. Lett. A \textbf{378}, 2100--2107 (2014)
+%
+%
+%\bibitem{Sherratt} Sherratt, J.A. 
+%{\em Numerical continuation methods for studying periodic travelling wave (wavetrain) 
+%solutions of partial differential equations}.
+%Appl. Math. Comp. \textbf{218}, 4684--4694 (2012)
+%
+%
+%\bibitem{Tjon} Courtenay Lewis, J. and Tjon, J.A.
+%              {\em Resonant production of solitons in the RLW equation}.
+%              Phys. Lett. A \textbf{73}, 275--279 (1979)
+%
+%
+%
+%\bibitem{Walsh2014} Walsh, S. 
+%{\em Steady stratified periodic gravity waves with surface tension I: Local bifurcation}.
+%Discrete Contin. Dyn. Syst. \textbf{34}, 3241--3285 (2014)
+%
+%
+%
+%\bibitem{Walsh2014j} Walsh, S. 
+%{\em Steady stratified periodic gravity waves with surface tension II: global bifurcation}. 
+%Discrete Contin. Dyn. Syst. \textbf{34}, 3287--3315 (2014)
+%
+%
+%
+%\bibitem{Whitham1967j} 
+%Whitham, G.B. 
+%{\em Variational methods and applications to water waves}.
+%Proc. Roy. Soc. London A \textbf{299}, 6--25 (1967)
+%
+%
+%\bibitem{Whitham74}
+%Whitham, G.B. 
+%Linear and Nonlinear Waves. Wiley, New York, (1974)
+%
+%
+%
+%\end{thebibliography}
+%
+%\end{document}
