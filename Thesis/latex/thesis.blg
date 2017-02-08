@@ -9,48 +9,56 @@ The style file: acm.bst
 Database file #1: thesis.bib
 I was expecting a `,' or a `}'---line 850 of file thesis.bib
  :  
- :  doi = {10.1016/j.amc.2011.11.005},
+ :  doi = "10.1016/j.amc.2011.11.005",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You've used 1 entry,
+I was expecting an "="---line 905 of file thesis.bib
+ :  url 
+ :      "http://indy.cs.concordia.ca/auto/",
+I'm skipping whatever remains of this entry
+Warning--empty journal in Doedel1997
+Warning--empty journal in Wahlen2016
+Warning--empty journal in Hur2015arxiv
+Warning--empty journal in github
+You've used 36 entries,
             2293 wiz_defined-function locations,
-            549 strings with 4196 characters,
-and the built_in function-call counts, 392 in all, are:
-= -- 36
-> -- 22
+            821 strings with 10187 characters,
+and the built_in function-call counts, 11308 in all, are:
+= -- 1148
+> -- 422
 < -- 0
-+ -- 10
-- -- 8
-* -- 37
-:= -- 71
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 7
++ -- 181
+- -- 140
+* -- 1015
+:= -- 1827
+add.period$ -- 108
+call.type$ -- 36
+change.case$ -- 177
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 10
-empty$ -- 27
-format.name$ -- 8
-if$ -- 74
+cite$ -- 40
+duplicate$ -- 359
+empty$ -- 965
+format.name$ -- 140
+if$ -- 2304
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 8
-num.names$ -- 2
-pop$ -- 5
+int.to.str$ -- 36
+missing$ -- 37
+newline$ -- 183
+num.names$ -- 72
+pop$ -- 128
 preamble$ -- 1
-purify$ -- 6
+purify$ -- 142
 quote$ -- 0
-skip$ -- 6
+skip$ -- 183
 stack$ -- 0
-substring$ -- 22
-swap$ -- 2
+substring$ -- 898
+swap$ -- 68
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
-warning$ -- 0
-while$ -- 4
-width$ -- 2
-write$ -- 13
-(There was 1 error message)
+type$ -- 142
+warning$ -- 4
+while$ -- 132
+width$ -- 38
+write$ -- 382
+(There were 2 error messages)

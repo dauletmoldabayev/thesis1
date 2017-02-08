@@ -2,35 +2,35 @@
 \section{A numerical study of nonlinear dispersive wave models with SpecTraVVave}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In nonlinear dispersive evolution equations, the competing effects of nonlinearity and dispersion 
-make a number of interesting phenomena possible. In the current work, the focus is on the numerical
-approximation of traveling-wave solutions of such equations.
-We describe our efforts to write a dedicated \textsf{Python}
-code which is able to compute traveling-wave solutions of nonlinear
-dispersive equations in a very general form.
-%\begin{equation*}
-%u_t + [f(u)]_{x} + \Lop u_x = 0,
-%\end{equation*}
-%%\vskip -0.05cm
-%where $\Lop$ is a self-adjoint operator, and $f$ is a real-valued function with 
-%$f(0) = 0$ and $f'(0) = 0$.
-
-The \textsf{SpecTraVVave} code uses a continuation method coupled with a spectral projection
-to compute approximations of steady symmetric solutions of this equation.
-The code is used in a number of situations to gain an
-understanding of traveling-wave solutions. The first case is the Whitham
-equation, where numerical evidence points to the conclusion that the main 
-bifurcation branch features three distinct points of interest, namely a turning point, 
-a point of stability inversion, and a terminal point which corresponds to a cusped wave.
-
-The second case is the so-called modified Benjamin--Ono equation where
-the interaction of two solitary waves is investigated. It is found
-that two solitary waves may interact in such a way
-that the smaller wave is annihilated. The third case concerns
-the Benjamin equation which features two competing dispersive operators.
-In this case, it is found that bifurcation curves of periodic traveling-wave
-solutions may cross and connect high up on the branch in the nonlinear regime.
-%Include keywords and mathematical subject classification numbers as needed.
+%In nonlinear dispersive evolution equations, the competing effects of nonlinearity and dispersion 
+%make a number of interesting phenomena possible. In the current work, the focus is on the numerical
+%approximation of traveling-wave solutions of such equations.
+%We describe our efforts to write a dedicated \textsf{Python}
+%code which is able to compute traveling-wave solutions of nonlinear
+%dispersive equations in a very general form.
+%%\begin{equation*}
+%%u_t + [f(u)]_{x} + \Lop u_x = 0,
+%%\end{equation*}
+%%%\vskip -0.05cm
+%%where $\Lop$ is a self-adjoint operator, and $f$ is a real-valued function with 
+%%$f(0) = 0$ and $f'(0) = 0$.
+%
+%The \textsf{SpecTraVVave} code uses a continuation method coupled with a spectral projection
+%to compute approximations of steady symmetric solutions of this equation.
+%The code is used in a number of situations to gain an
+%understanding of traveling-wave solutions. The first case is the Whitham
+%equation, where numerical evidence points to the conclusion that the main 
+%bifurcation branch features three distinct points of interest, namely a turning point, 
+%a point of stability inversion, and a terminal point which corresponds to a cusped wave.
+%
+%The second case is the so-called modified Benjamin--Ono equation where
+%the interaction of two solitary waves is investigated. It is found
+%that two solitary waves may interact in such a way
+%that the smaller wave is annihilated. The third case concerns
+%the Benjamin equation which features two competing dispersive operators.
+%In this case, it is found that bifurcation curves of periodic traveling-wave
+%solutions may cross and connect high up on the branch in the nonlinear regime.
+%%Include keywords and mathematical subject classification numbers as needed.
 
 
 \subsection{Introduction}
@@ -131,7 +131,8 @@ precise nature of the termination of the bifurcation curve.
 
 
 The content of the paper is structured as follows. A mathematical description of the numerical method of 
-\textsf{SpecTraVVave} is given in \autoref{sec:spectral}. \autoref{sec:experiments} presents results of different experiments carried out with the package. Concluding remarks are given in \autoref{sec:conclusion}. A method for finding initial guesses for the solver is described in \autoref{sec:stokes}. \autoref{sec:implementation} contains a schematic of program and a description of its workflow.
+\textsf{SpecTraVVave} is given in section \ref{sec:spectral}. Section \ref{sec:experiments} presents results of different experiments carried out with the package. Concluding remarks are given in section \ref{sec:conclusion}. 
+%A method for finding initial guesses for the solver is described in \ref{sec:stokes}. \ref{sec:implementation} contains a schematic of program and a description of its workflow.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Spectral scheme and construction of nonlinear system.}
@@ -193,7 +194,7 @@ are to be computed in the form of a linear combination of cosine functions of di
 wave-numbers, i.e., in the space
 %%%%%%%%%===========%%%%%%%%%%%%%%%
 \begin{equation}
-\SN = \mathrm{span}_{\R}\setc{\cos(lx)}{0 \leq l \leq N-1 }
+\SN = \mbox{span}_{\R}\{ cos(lx) | 0 \leq l \leq N-1 \}
 .
 \end{equation}
 %%%%%%%%%===========%%%%%%%%%%%%%%%
@@ -391,7 +392,7 @@ and therefore, considering the symmetry of solitary solutions,
 the half-wavelength of $30$ is considered for the comparison. 
 %\itodo[DM]{as mentioned before: should we call the (full-wavelength )/2 as half-wavelength OR just wavelength. 
 %This may lead to confusions for reviewers.}
-Approximation errors are summarized in \autoref{t2}.
+Approximation errors are summarized in \ref{t2}.
 %
 \begin{table}  [ht]
 \centering
@@ -419,7 +420,7 @@ Nb.\ of grid points & $\log_{10}(\|u_{\mathrm{exact}} - u\|_{L^{\infty}})$ & $\l
 %\begin{figure}[ht]
 %\centering
 %\includegraphics[width=0.47\textwidth]{convergence}      
-%\caption{\small Graph of error estimates given in \autoref{t2}.}
+%\caption{\small Graph of error estimates given in \autoref{Ben_disp_rel}ref{t2}.}
 %\label{L2convergence}
 %\end{figure} 
 %%%%%%%%%===========%%%%%%%%%%%%%%%
@@ -463,13 +464,13 @@ Special attention is given to relation between stability of solutions
 and their waveheight and velocity parameters, i.e., their position on the bifurcation curve. 
 The following questions are under study: 
 %%%%%%%%%===========%%%%%%%%%%%%%%%
-\begin{enumerate}[label=\alph*)] % chktex 9 chktex 10
-\item Where does the bifurcation curve terminate?
+\begin{itemize} % chktex 9 chktex 10
+\item[a)] Where does the bifurcation curve terminate?
 
-\item Where on the bifurcation curve do solutions change their stability?
+\item[b)] Where on the bifurcation curve do solutions change their stability?
 
-\item Is there any role that the turning point on the bifurcation curve plays?
-\end{enumerate}
+\item[c)] Is there any role that the turning point on the bifurcation curve plays?
+\end{itemize}
 %%%%%%%%%===========%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -665,7 +666,7 @@ On the other hand, if a function is not smooth, the discrete cosine coefficients
 To identify the best fit, two parameters were used: $L^2$-norm of the residual 
 and the Akaike information criterion (AIC) measure. 
 
-From the data given in the \autoref{t1}, one can deduce that for solutions with minimum speed 
+From the data given in the \ref{t1}, one can deduce that for solutions with minimum speed 
 and maximum $L^2$-norm exponential fit is better than polynomial. 
 That is not the case for the terminal solution. 
 Thus, the first two solutions are smooth and the terminal solution is nonsmooth. 

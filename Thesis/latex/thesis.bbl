@@ -1,4 +1,94 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{Alvarez2014}
+{\sc \'Alvarez, J., and Dur\'an, A.}
+\newblock An extended petviashvili method for the numerical generation of
+  traveling and localized waves.
+\newblock {\em Communications in Nonlinear Science and Numerical Simulation
+  19}, 7 (2014), 2272--2283,
+  \href{http://dx.doi.org/10.1016/j.cnsns.2013.12.004}{doi:
+  10.1016/j.cnsns.2013.12.004}.
+
+\bibitem{Alvarez2014j}
+{\sc \'Alvarez, J., and Dur\'an, A.}
+\newblock Petviashvili type methods for traveling wave computations: I.
+  analysis of convergence.
+\newblock {\em Journal of Computational and Applied Mathematics 266\/} (2014),
+  39--51, \href{http://dx.doi.org/10.1016/j.cam.2014.01.015}{doi:
+  10.1016/j.cam.2014.01.015}.
+
+\bibitem{Benjamin1967}
+{\sc Benjamin, T.~B.}
+\newblock Internal waves of permanent form in fluids of great depth.
+\newblock {\em Journal of Fluid Mechanics 29\/} (1967), 559--592,
+  \href{http://dx.doi.org/10.1017/S002211206700103X}{doi:
+  10.1017/S002211206700103X}.
+
+\bibitem{Benjamin1972j}
+{\sc Benjamin, T.~B.}
+\newblock The stability of solitary waves.
+\newblock {\em Proceedings of the Royal Society of London A: Mathematical,
+  Physical and Engineering Sciences 328}, 1573 (1972), 153--183,
+  \href{http://dx.doi.org/10.1098/rspa.1972.0074}{doi: 10.1098/rspa.1972.0074}.
+
+\bibitem{Benjamin1992}
+{\sc Benjamin, T.~B.}
+\newblock A new kind of solitary wave.
+\newblock {\em Journal of Fluid Mechanics 245\/} (1992), 401--411,
+  \href{http://dx.doi.org/10.1017/S002211209200051X}{doi:
+  10.1017/S002211209200051X}.
+
+\bibitem{Bona2004}
+{\sc Bona, J.~L., and Kalisch, H.}
+\newblock Singularity formation in the generalized benjamin-ono equation.
+\newblock {\em Discrete and Continuous Dynamical Systems 11}, 1 (2004), 27--45,
+  \href{http://dx.doi.org/10.3934/dcds.2004.11.27}{doi:
+  10.3934/dcds.2004.11.27}.
+
+\bibitem{Bona1987}
+{\sc Bona, J.~L., Souganidis, P.~E., and Strauss, W.~A.}
+\newblock Stability and instability of solitary waves of korteweg-de vries
+  type.
+\newblock {\em Proceedings of the Royal Society of London A: Mathematical,
+  Physical and Engineering Sciences 411}, 1841 (1987), 395--412,
+  \href{http://dx.doi.org/10.1098/rspa.1987.0073}{doi: 10.1098/rspa.1987.0073}.
+
+\bibitem{Bridges2004}
+{\sc Bridges, T.~J.}
+\newblock Superharmonic instability, homoclinic torus bifurcation and
+  water-wave breaking.
+\newblock {\em Journal of Fluid Mechanics 505\/} (2004), 153--162,
+  \href{http://dx.doi.org/10.1017/S0022112004008432}{doi:
+  10.1017/S0022112004008432}.
+
+\bibitem{Chen1998}
+{\sc Chen, H., and Bona, J.~L.}
+\newblock Existence and asymptotic properties of solitary-wave solutions of
+  benjamin-type equations.
+\newblock {\em Adv. Differential Equations 3}, 1 (1998), 51--84.
+
+\bibitem{Chen2016}
+{\sc Chen, R.~M., and Walsh, S.}
+\newblock Continuous dependence on the density for stratified steady water
+  waves.
+\newblock {\em Archive for Rational Mechanics and Analysis 219}, 2 (2016),
+  741--792, \href{http://dx.doi.org/10.1007/s00205-015-0906-6}{doi:
+  10.1007/s00205-015-0906-6}.
+
+\bibitem{Tjon1979}
+{\sc {Courtenay Lewis}, J., and {Tjon}, J.~A.}
+\newblock {Resonant production of solitons in the RLW equation}.
+\newblock {\em Physics Letters A 73\/} (1979), 275--279,
+  \href{http://dx.doi.org/10.1016/0375-9601(79)90532-2}{doi:
+  10.1016/0375-9601(79)90532-2}.
+
+\bibitem{DeFrutos1992}
+{\sc de~Frutos, J., and Sanz-Serna, J.~M.}
+\newblock An easily implementable fourth-order method for the time integration
+  of wave problems.
+\newblock {\em Journal of Computational Physics 103}, 1 (1992), 160--168,
+  \href{http://dx.doi.org/10.1016/0021-9991(92)90331-R}{doi:
+  10.1016/0021-9991(92)90331-R}.
 
 \bibitem{Dinvay2017}
 {\sc Dinvay, E., Moldabayev, D., Dutykh, D., and Kalisch, H.}
@@ -6,5 +96,154 @@
 \newblock {\em Nonlinear Dynamics\/} (2017), 1--14,
   \href{http://dx.doi.org/10.1007/s11071-016-3299-7}{doi:
   10.1007/s11071-016-3299-7}.
+
+\bibitem{Doedel1997}
+{\sc Doedel, E., Champneys, A., Fairgrieve, T., Kuznetsov, Y., Sandstede, B.,
+  and Wang, X.-J.}
+\newblock Auto97 : Continuation and bifurcation software for ordinary
+  differential equations.
+\newblock arXiv:1506.04075.
+
+\bibitem{Dougalis2015}
+{\sc Dougalis, V.~A., Dur\'an, A., and Mitsotakis, D.}
+\newblock Numerical solution of the benjamin equation.
+\newblock {\em Wave Motion 52\/} (2015), 194--215,
+  \href{http://dx.doi.org/10.1016/j.wavemoti.2014.10.004}{doi:
+  10.1016/j.wavemoti.2014.10.004}.
+
+\bibitem{Wahlen2016}
+{\sc Ehrnstr{\"o}m, M., and Wahl\'en, E.}
+\newblock On whitham's conjecture of a highest cusped wave for a nonlocal
+  dispersive equation.
+\newblock arXiv:1602.05384.
+
+\bibitem{Ehrnstrom2009}
+{\sc Ehrnström, M., and Kalisch, H.}
+\newblock Traveling waves for the whitham equation.
+\newblock {\em Differential Integral Equations 22\/} (2009), 1193--1210.
+
+\bibitem{Ehrnstrom2013}
+{\sc Ehrnström, M., and Kalisch, H.}
+\newblock Global bifurcation for the whitham equation.
+\newblock {\em Math. Mod. Nat. Phenomena 8\/} (2013), 13--30,
+  \href{http://dx.doi.org/10.1051/mmnp/20138502}{doi: 10.1051/mmnp/20138502}.
+
+\bibitem{Verdier2014}
+{\sc Führer, C., Solem, J.~E., and Verdier, O.}
+\newblock {\em Computing with Python: An introduction to Python for science and
+  engineering}.
+\newblock Pearson, 2014.
+
+\bibitem{Hur2015arxiv}
+{\sc Hur, V.}
+\newblock Breaking in the whitham equation for shallow water waves.
+\newblock arXiv:1506.04075.
+
+\bibitem{Hur2015}
+{\sc Hur, V.~M., and Johnson, M.~A.}
+\newblock Modulational instability in the whitham equation of water waves.
+\newblock {\em Stud. Appl. Math. 134}, 1 (2015), 120--143.
+
+\bibitem{Tao2014}
+{\sc Hur, V.~M., and Tao, L.}
+\newblock Wave breaking for the whitham equation with fractional dispersion.
+\newblock {\em Nonlinearity 27}, 12 (2014), 2937--2950,
+  \href{http://dx.doi.org/10.1088/0951-7715/27/12/2937}{doi:
+  10.1088/0951-7715/27/12/2937}.
+
+\bibitem{Kalisch2005}
+{\sc Kalisch, H.}
+\newblock Error analysis of a spectral projection of the regularized
+  benjamin--ono equation.
+\newblock {\em BIT Numerical Mathematics 45}, 1 (2005), 69--89,
+  \href{http://dx.doi.org/10.1007/s10543-005-2636-x}{doi:
+  10.1007/s10543-005-2636-x}.
+
+\bibitem{Kalisch2007}
+{\sc Kalisch, H.}
+\newblock Derivation and comparison of model equations for interfacial
+  capillary-gravity waves in deep water.
+\newblock {\em Mathematics and Computers in Simulation 74}, 2–3 (2007),
+  168--178, \href{http://dx.doi.org/10.1016/j.matcom.2006.10.008}{doi:
+  10.1016/j.matcom.2006.10.008}.
+
+\bibitem{Kalisch2000}
+{\sc Kalisch, H., and Bona, J.~L.}
+\newblock Models for internal waves in deep water.
+\newblock {\em Discrete and Continuous Dynamical Systems 6\/} (2000), 1--20.
+
+\bibitem{Kato1983}
+{\sc Kato, T.}
+\newblock On the cauchy problem for the (generalized) korteweg–de vries
+  equation.
+\newblock {\em Studies in applied mathematics, Adv. Math. Suppl. Stud. 8\/}
+  (1983), 93--128.
+
+\bibitem{Keller1977}
+{\sc Keller, H.~B.}
+\newblock Numerical solution of bifurcation and nonlinear eigenvalue problems.
+\newblock {\em Applications of Bifurcation Theory\/} (1977), 359--3 84.
+
+\bibitem{Martel2016}
+{\sc Martel, Y., and Pilod, D.}
+\newblock Construction of a minimal mass blow up solution of the modified
+  benjamin--ono equation.
+\newblock {\em Mathematische Annalen\/} (2016), 1--93,
+  \href{http://dx.doi.org/10.1007/s00208-016-1497-8}{doi:
+  10.1007/s00208-016-1497-8}.
+
+\bibitem{github}
+{\sc Moldabayev, D., Verdier, O., and Kalisch, H.}
+\newblock Spectravvave.
+\newblock available at https://github.com/olivierverdier/SpecTraVVave.
+
+\bibitem{Nguyen2009}
+{\sc Nguyen, N.~T., and Kalisch, H.}
+\newblock Orbital stability of negative solitary waves.
+\newblock {\em Mathematics and Computers in Simulation 80}, 1 (2009), 139--150,
+  \href{http://dx.doi.org/10.1016/j.matcom.2009.06.010}{doi:
+  10.1016/j.matcom.2009.06.010}.
+
+\bibitem{Pelinovsky2004}
+{\sc Pelinovsky, D.~E., and Stepanyants, Y.~A.}
+\newblock Convergence of petviashvili’s iteration method for numerical
+  approximation of stationary solutions of nonlinear wave equations.
+\newblock {\em J. Numer. Anal. 42\/} (2004), 1110--1127,
+  \href{http://dx.doi.org/10.1137/S0036142902414232}{doi:
+  10.1137/S0036142902414232}.
+
+\bibitem{Perez2007}
+{\sc P\'erez, F., and Granger, B.~E.}
+\newblock Ipython: a system for interactive scientific computing.
+\newblock {\em Computing in Science and Engineering 9}, 3 (2007), 21--29,
+  \href{http://dx.doi.org/10.1109/MCSE.2007.53}{doi: 10.1109/MCSE.2007.53}.
+
+\bibitem{Remonato2016}
+{\sc Remonato, F., and Kalisch, H.}
+\newblock Numerical bifurcation for the capillary whitham equation.
+\newblock {\em Physica D: Nonlinear Phenomena\/} (2016), --,
+  \href{http://dx.doi.org/10.1016/j.physd.2016.11.003}{doi:
+  10.1016/j.physd.2016.11.003}.
+
+\bibitem{Sherratt2012}
+{\sc Sherratt, J.~A.}
+\newblock Numerical continuation methods for studying periodic travelling wave
+  (wavetrain) solutions of partial differential equations.
+\newblock {\em Applied Mathematics and Computation 218\/} (2012), 4684--4694.
+
+\bibitem{Walsh2014}
+{\sc Walsh, S.}
+\newblock Steady stratified periodic gravity waves with surface tension i:
+  Local bifurcation.
+\newblock {\em Discrete and Continuous Dynamical Systems 34}, 8 (2014),
+  3241--3285, \href{http://dx.doi.org/10.3934/dcds.2014.34.3241}{doi:
+  10.3934/dcds.2014.34.3241}.
+
+\bibitem{Whitham1967j}
+{\sc Whitham, G.~B.}
+\newblock Variational methods and applications to water waves.
+\newblock {\em Proceedings of the Royal Society of London A: Mathematical,
+  Physical and Engineering Sciences 299}, 1456 (1967), 6--25,
+  \href{http://dx.doi.org/10.1098/rspa.1967.0119}{doi: 10.1098/rspa.1967.0119}.
 
 \end{thebibliography}
