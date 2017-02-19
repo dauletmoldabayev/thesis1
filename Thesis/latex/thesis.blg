@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: preface.aux
@@ -6,6 +6,7 @@ A level-1 auxiliary file: acknowledgements.aux
 A level-1 auxiliary file: outline.aux
 A level-1 auxiliary file: introduction.aux
 The style file: acm.bst
+A level-1 auxiliary file: papers.aux
 Database file #1: thesis.bib
 I was expecting a `,' or a `}'---line 850 of file thesis.bib
  :  
@@ -16,49 +17,45 @@ I was expecting an "="---line 905 of file thesis.bib
  :  url 
  :      "http://indy.cs.concordia.ca/auto/",
 I'm skipping whatever remains of this entry
-Warning--empty journal in Doedel1997
-Warning--empty journal in Wahlen2016
-Warning--empty journal in Hur2015arxiv
-Warning--empty journal in github
-You've used 36 entries,
+You've used 1 entry,
             2293 wiz_defined-function locations,
-            821 strings with 10187 characters,
-and the built_in function-call counts, 11308 in all, are:
-= -- 1148
-> -- 422
+            550 strings with 4206 characters,
+and the built_in function-call counts, 392 in all, are:
+= -- 36
+> -- 22
 < -- 0
-+ -- 181
-- -- 140
-* -- 1015
-:= -- 1827
-add.period$ -- 108
-call.type$ -- 36
-change.case$ -- 177
++ -- 10
+- -- 8
+* -- 37
+:= -- 71
+add.period$ -- 3
+call.type$ -- 1
+change.case$ -- 7
 chr.to.int$ -- 0
-cite$ -- 40
-duplicate$ -- 359
-empty$ -- 965
-format.name$ -- 140
-if$ -- 2304
+cite$ -- 1
+duplicate$ -- 10
+empty$ -- 27
+format.name$ -- 8
+if$ -- 74
 int.to.chr$ -- 0
-int.to.str$ -- 36
-missing$ -- 37
-newline$ -- 183
-num.names$ -- 72
-pop$ -- 128
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 8
+num.names$ -- 2
+pop$ -- 5
 preamble$ -- 1
-purify$ -- 142
+purify$ -- 6
 quote$ -- 0
-skip$ -- 183
+skip$ -- 6
 stack$ -- 0
-substring$ -- 898
-swap$ -- 68
+substring$ -- 22
+swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 142
-warning$ -- 4
-while$ -- 132
-width$ -- 38
-write$ -- 382
+type$ -- 4
+warning$ -- 0
+while$ -- 4
+width$ -- 2
+write$ -- 13
 (There were 2 error messages)
