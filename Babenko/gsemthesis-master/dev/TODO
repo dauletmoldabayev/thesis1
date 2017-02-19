@@ -1,0 +1,42 @@
+TO DO
+=====
+
+CTAN
+----
+
+.dtx
+----
+
+* option for setting the phdthesis mention
+* how to manually edit the thesis mention
+* 4a/b5
+* ISBN
+* change the language fr/en according to the language of the abstract (for corrrect hyphenation) (see FR/EN management)
+* currently the \date command is ignored. We should test whether the \date command was used by the user and in this case use the content supplied.
+* bibliography: remove the volume, or add the journal before the title.
+* check out which options to use with babel: francais, french, frenchb
+* In the minimal working example section, give the link to the complete example used for testing purpose on github.
+
+User manual
+-----------
+
+* frequent errors, LaTeX Error: File `subfigure.sty` not found. => texlive-latex-extra
+* english proofreview
+
+Readme
+------
+
+
+FR/EN management
+----------------
+
+\usepackage[french,american]{babel} % WAWA: need both disctionnaries because of two abstracts
+\usepackage[T1]{fontenc} % WAWA: required for "Résumé", used with \begin{otherlanguage}{french}\end{otherlanguage}
+
+\chapter*{R\' esum\'e} % WAWA: added abstract in French
+\addcontentsline{toc}{chapter}{R\'esum\'e} % WAWA: added abstract in French
+\label{ch:abstractFR} % WAWA: added abstract in French
+\thispagestyle{plain} % WAWA: added abstract in French
+\begin{otherlanguage}{french}
+\theabstractFR % WAWA: added abstract in French
+\end{otherlanguage}

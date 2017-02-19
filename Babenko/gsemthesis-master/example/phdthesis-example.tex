@@ -1,0 +1,134 @@
+\documentclass{gsemthesis}
+% \documentclass[fr]{gsemthesis} % use the 'fr' option if you write your dissertation in French
+% \documentclass[draft]{gsemthesis} % use the 'draft' option for a lightweight version
+% \documentclass[fr,draft]{gsemthesis} % use a comma to separate options
+\usepackage{lipsum} % required for this demo file, but for your thesis you can remove it
+
+
+% ==================================================
+% THESIS SETTINGS
+% Fill the following fields with your thesis details
+% ==================================================
+\title{An innovative approach to deal with a very important issue}
+\date{\today}
+\authorFirstname{Firstname}
+\authorLastname{Lastname}
+\thesisField{Econometrics}
+% \thesisCommitteeX{TITLE}{FIRSTNAME}{LASTNAME}{ROLE, AFFILIATION}
+\thesisCommitteeA{Prof.}{Mike}{Moore}{Adviser, University of Geneva}
+\thesisCommitteeB{Prof.}{Mike}{Moore}{Chair, University of Honolulu}
+\thesisCommitteeC{Prof.}{Mike}{Moore}{University of Omsk}
+\thesisCommitteeD{Dr.}{Mike}{Moore}{Eidgenössische Technische Hochschule Zürich}
+\thesisCommitteeE{}{}{}{}
+\thesisCommitteeF{}{}{}{}
+\thesisNumber{480}
+
+
+\acknowledgements{
+\lipsum[1-3]
+}
+
+\abstractEN{
+\lipsum[1-3]
+}
+
+\abstractFR{
+\lipsum[4-6]
+}
+
+\dedication{
+To my family.
+}
+
+
+% Define here your bib files (you can use absolute paths)
+\addbibresource{literature-review-topic1.bib}
+\addbibresource{literature-review-topic2.bib}
+
+
+% ==================================================
+% BEGIN DOCUMENT
+% Document starts here
+% ==================================================
+\begin{document}
+
+% Print the cover page
+\printcoverpage
+
+% Print the front matter pages
+\printfrontmatter
+
+
+% ==================================================
+% INTRODUCTION
+% ==================================================
+\startintroduction 
+
+\lipsum[1]
+
+\section*{Context of this study}
+\addcontentsline{toc}{section}{Context of this study}
+\label{sec:context}
+
+\lipsum[2]
+\begin{itemize*}
+\item a first item
+\item a second item
+\end{itemize*}
+\lipsum[3-29]
+
+
+
+% ==================================================
+% CHAPTER DELIMITER
+% ==================================================
+\chapter{Literature review}
+\label{ch:lt}
+
+\lipsum[30]
+
+\section{A first approach}
+\label{sec:first}
+
+\lipsum[31-50]
+
+\section{A second approach}
+
+\lipsum[51-70]
+
+In \textcite{keyref2} the authors improve the methodology introduced in \autocite{keyref1} and discussed in Section \ref{sec:first}.
+
+
+
+
+% ==================================================
+% CONCLUSION
+% ==================================================
+\startconclusion
+
+\lipsum[100-111]
+
+
+
+
+
+
+% ==================================================
+% APPENDICES
+\part*{Appendices}
+\appendix
+% ==================================================
+
+
+\chapter{A useful appendix}
+
+Appendices appear before the list of tables/figures and the bibliography. 
+
+
+% ==================================================
+% BACKMATTER
+% ==================================================
+
+\printbackmatter
+
+\end{document}

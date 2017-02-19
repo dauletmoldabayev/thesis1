@@ -1,0 +1,174 @@
+% Copyright 2007 by Till Tantau
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+
+
+\documentclass{beamer}
+%\include{pythonlisting}
+%
+% DO NOT USE THIS FILE AS A TEMPLATE FOR YOUR OWN TALKS¡!!
+%
+% Use a file in the directory solutions instead.
+% They are much better suited.
+%
+
+
+% Setup appearance:
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+%\usetheme{Antibes}
+%\usefonttheme[onlylarge]{structurebold}
+\setbeamerfont*{frametitle}{size=\normalsize,series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+
+% Set fonts
+\usepackage{helvet}
+\usefonttheme{serif}
+
+
+% Standard packages
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+%\usepackage{times}
+\usepackage{amsmath}
+\usepackage{eurosym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{float,color}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{soul}
+\usepackage{subfigure}
+\usepackage{color}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+%\usepackage{sidecap}
+%\usepackage{caption}
+\usepackage{framed}
+%\usepackage{subcaption}
+%\usepackage{multimedia}
+\usepackage{listings}
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+\newcommand{\FF}{\mathcal{F}}
+\newcommand{\Lop}{\mathcal{L}}
+\newcommand{\Aop}{\mathcal{A}}
+\newcommand{\RR}{\mathbf{R}}
+\newcommand{\NN}{\mathbf{N}}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\ZZ}{\mathbf{Z}}
+\newcommand{\SN}{\mathcal{S}_N}
+
+\DeclareMathOperator{\sech}{sech}
+
+
+% Author, Title, etc.
+
+\title[] 
+{
+	The Babenko equation: \\ derivation, numerics and solutions \\
+}
+
+\author[]
+{
+  Daulet~Moldabayev
+}
+
+%\institute[UiB]
+%{
+%University of Bergen 
+%}
+
+\date[]
+{University of Bergen}
+
+
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \maketitle
+\end{frame}
+
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\include{statement}
+
+%\include{numerics}
+
+%\include{solutions}
+\end{document}
+

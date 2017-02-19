@@ -1,0 +1,39 @@
+mktextfm phvr8t
+mktextfm phvr8t
+mktextfm phvb8t
+mktextfm nullfont
+mktextfm phvb8t
+mktextfm nullfont
+mktextfm phvr8t
+mktextfm phvr8t
+mktextfm phvro8t
+mktextfm nullfont
+mktextfm phvro8t
+mktextfm nullfont
+mktextfm phvro8t
+mktextfm nullfont
+mktextfm phvb8t
+mktextfm nullfont
+mktextfm phvb8t
+mktextfm nullfont
+mktextfm phvr8t
+mktextfm phvr8t
+mktextfm phvb8t
+mktextfm nullfont
+mktextfm phvb8t
+mktextfm nullfont
+mktextfm phvr8t
+mktextfm phvr8t
+mktextfm phvb8t
+mktextfm nullfont
+mktextfm phvb8t
+mktextfm nullfont
+mktextfm phvro8t
+mktextfm nullfont
+mktextfm phvro8t
+mktextfm nullfont
+mktextfm phvro8t
+mktextfm nullfont
+mktexpk --mfmode / --bdpi 600 --mag 1+0/600 --dpi 600 ccr8
+mktexpk --mfmode / --bdpi 600 --mag 1+0/600 --dpi 600 ccr8
+mktexpk --mfmode / --bdpi 600 --mag 1+0/600 --dpi 600 ccr8
