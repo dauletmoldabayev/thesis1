@@ -1,0 +1,32 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.3.5)  5 MAR 2017 22:11
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**thesis.tex
+(./thesis.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+\@input{settings.aux}
+\openout2 = `settings.aux'.
+
+No file settings.tex.
+./thesis.tex:9: Undefined control sequence.
+l.9 \ifcompileiliad
+                   
+? 
+./thesis.tex:9: Emergency stop.
+l.9 \ifcompileiliad
+                   
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 6 strings out of 493014
+ 131 string characters out of 6133352
+ 53601 words of memory out of 5000000
+ 3648 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 9i,0n,5p,69b,12s stack positions out of 5000i,500n,10000p,200000b,80000s
+./thesis.tex:9:  ==> Fatal error occurred, no output PDF file produced!

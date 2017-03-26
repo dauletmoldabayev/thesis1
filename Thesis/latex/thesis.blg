@@ -1,12 +1,12 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: preface.aux
 A level-1 auxiliary file: acknowledgements.aux
 A level-1 auxiliary file: outline.aux
 A level-1 auxiliary file: introduction.aux
+A level-1 auxiliary file: introduction_papers.aux
 The style file: acm.bst
-A level-1 auxiliary file: papers.aux
 Database file #1: thesis.bib
 I was expecting a `,' or a `}'---line 850 of file thesis.bib
  :  
@@ -17,45 +17,46 @@ I was expecting an "="---line 905 of file thesis.bib
  :  url 
  :      "http://indy.cs.concordia.ca/auto/",
 I'm skipping whatever remains of this entry
-You've used 1 entry,
+Warning--empty journal in Mitsotakis2014
+You've used 30 entries,
             2293 wiz_defined-function locations,
-            550 strings with 4206 characters,
-and the built_in function-call counts, 392 in all, are:
-= -- 36
-> -- 22
+            785 strings with 9249 characters,
+and the built_in function-call counts, 9736 in all, are:
+= -- 977
+> -- 380
 < -- 0
-+ -- 10
-- -- 8
-* -- 37
-:= -- 71
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 7
++ -- 167
+- -- 128
+* -- 873
+:= -- 1571
+add.period$ -- 90
+call.type$ -- 30
+change.case$ -- 150
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 10
-empty$ -- 27
-format.name$ -- 8
-if$ -- 74
+cite$ -- 31
+duplicate$ -- 309
+empty$ -- 829
+format.name$ -- 128
+if$ -- 1986
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 8
-num.names$ -- 2
-pop$ -- 5
+int.to.str$ -- 30
+missing$ -- 34
+newline$ -- 153
+num.names$ -- 60
+pop$ -- 122
 preamble$ -- 1
-purify$ -- 6
+purify$ -- 124
 quote$ -- 0
-skip$ -- 6
+skip$ -- 158
 stack$ -- 0
-substring$ -- 22
-swap$ -- 2
+substring$ -- 768
+swap$ -- 59
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
-warning$ -- 0
-while$ -- 4
-width$ -- 2
-write$ -- 13
+type$ -- 112
+warning$ -- 1
+while$ -- 109
+width$ -- 32
+write$ -- 324
 (There were 2 error messages)

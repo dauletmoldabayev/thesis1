@@ -1,15 +1,15 @@
-\contentsline {chapter}{Preface}{i}{chapter*.1}
-\contentsline {chapter}{Acknowledgements}{iii}{chapter*.2}
-\contentsline {chapter}{Outline}{v}{chapter*.3}
 \contentsline {part}{I\hspace {1em}Background}{1}{part.1}
 \contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
 \contentsline {chapter}{\numberline {2}Summary of results}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}The Whitham equation with surface tension}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}A numerical study of nonlinear dispersive wave models with SpecTraVVave}{5}{section.2.2}
-\contentsline {section}{\numberline {2.3}Explicit solutions for a long-wave model with constant vorticity}{5}{section.2.3}
-\contentsline {chapter}{Bibliography}{7}{section.2.3}
-\contentsline {part}{II\hspace {1em}Scientific results}{9}{part.2}
-\contentsline {chapter}{Paper A The Whitham equation as a model for surface water waves}{11}{chapter*.7}
-\contentsline {chapter}{Paper B The Whitham equation with surface tension}{23}{chapter*.9}
-\contentsline {chapter}{Paper C A numerical study of nonlinear dispersive wave models with SpecTraVVave}{39}{chapter*.11}
-\contentsline {chapter}{Paper D Explicit solutions for a long-wave model with constant vorticity}{69}{chapter*.13}
+\contentsline {section}{\numberline {2.1}The Whitham equation as a model for surface water waves}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Introduction.}{5}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Derivation of evolution systems of Whitham type.}{8}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Derivation of evolution equations of Whitham type.}{11}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Numerical results.}{12}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.5}Conclusion.}{15}{subsection.2.1.5}
+\contentsline {section}{\numberline {2.2}The Whitham equation with surface tension}{15}{section.2.2}
+\contentsline {section}{\numberline {2.3}A numerical study of nonlinear dispersive wave models with SpecTraVVave}{15}{section.2.3}
+\contentsline {section}{\numberline {2.4}Explicit solutions for a long-wave model with constant vorticity}{15}{section.2.4}
+\contentsline {chapter}{\numberline {3}Introduction to the papers}{17}{chapter.3}
+\contentsline {chapter}{Bibliography}{19}{chapter.3}
+\contentsline {part}{II\hspace {1em}Scientific results}{23}{part.2}
